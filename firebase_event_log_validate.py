@@ -130,7 +130,7 @@ def events_from_log_stream(
         if filter_firebase_only and "firebase" not in line:
             continue
         ev = parse_log_line(line)
-        if ev is not None and ev.get("type") == "firebase":
+        if ev is not None and ev.get("type") in ("firebase", "firebase_v2"):
             ev["_log_timestamp"] = extract_log_timestamp(line, platform=platform)
             ev["_platform"] = platform
             yield ev
@@ -527,7 +527,7 @@ def main() -> None:
                         continue
                     try:
                         ev = json.loads(line)
-                        if ev.get("type") == "firebase":
+                        if ev.get("type") in ("firebase", "firebase_v2"):
                             ev_platform = ev.get("_platform")
                             if ev_platform is None or ev_platform == plat:
                                 events.append(ev)

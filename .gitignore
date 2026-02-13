@@ -48,3 +48,8 @@ verify_result*.txt
 # Other
 .localized
 .secrets/
+
+# Test result
+verify_result*.txt
+firebase_event_verify_result/
+test_cases/
