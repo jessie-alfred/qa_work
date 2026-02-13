@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+.venv/
+.venv_temp/
+venv/
+ENV/
+env/
+
+# IDEs
+.DS_Store
+.vscode/
+.idea/
+
+# Secrets and credentials
+*.p8
+*.p12
+*.pem
+*.key
+*api*token*
+*api*key*
+*credentials*.json
+service_account_keys.py
+JIRA-api-token
+github_token
+chatgpt_api.key
+openaiKEY
+*.conf
+
+# Test results and logs
+*.log
+*.txt
+verify_result*.txt
+
+# Temporary files
+*.zip
+*.gz
+*.img
+*.bin
+*.MP4
+
+# Excel files (optional, uncomment if you want to ignore)
+# *.xlsx
+
+# Other
+.localized
+.secrets/

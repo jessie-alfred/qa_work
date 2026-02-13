@@ -1,0 +1,199 @@
+測試案例編號,測試分類,測試標題,測試目標,前置條件,測試步驟,預期結果,優先級,狀態,備註
+1.1,功能與業務邏輯測試,硬體裝置配對完成後 User Properties 同步測試,驗證硬體裝置配對完成後 eligible_hw_free_trial is_alfredcam_owner 正確同步到 Third-Party,"Android 設備準備配對硬體相機（AC101/AC201/AC202）
+測試帳號為新用戶或符合硬體免費試用資格
+準備 Third-Party 後台查看工具（Amplitude Appcues RevenueCat）","1. 使用測試帳號登入 App
+2. 進入硬體相機配對流程
+3. 完成硬體相機配對（掃描 QR Code 或輸入配對碼）
+4. 等待配對完成
+5. 檢查 API Response（GET /v2.6/device/pairing/{code}/paired）：驗證 eligible_hw_free_trial 欄位存在且值正確 驗證 is_alfredcam_owner 欄位存在且值為 true
+6. 等待 User Properties 同步（約 1-2 秒）
+7. 檢查 Third-Party 後台：Amplitude：驗證 eligible_hw_free_trial is_alfredcam_owner 屬性 Appcues：驗證 eligible_hw_free_trial is_alfredcam_owner 屬性 RevenueCat：驗證 eligible_hw_free_trial is_alfredcam_owner 屬性（型態為 String）","API Response 包含 eligible_hw_free_trial is_alfredcam_owner 欄位
+is_alfredcam_owner 值為 true（Boolean）
+Third-Party 後台正確記錄屬性值
+RevenueCat 的 is_alfredcam_owner 為 String 型態（true）
+同步時間 < 5 秒（即時同步）",P0,待測試,
+1.2,功能與業務邏輯測試,訂閱購買完成後 User Properties 同步測試 - Premium,驗證 Premium 訂閱購買完成後所有訂閱相關屬性正確同步到 Third-Party,"Android 設備已安裝 App
+測試帳號為 Free 用戶
+準備 Premium 訂閱購買（測試環境或沙盒環境）
+準備 Third-Party 後台查看工具","1. 使用 Free 帳號登入 App
+2. 進入 Premium 訂閱購買頁面
+3. 選擇 Premium 訂閱方案（月付/年付）
+4. 完成訂閱購買流程
+5. 觀察 Polling 機制：每 1 秒輪詢一次 API（GET /entitlement/v1/attributes/subscription） 最多輪詢 5 次（總共 5 秒） 成功條件：API 回傳 updated = true
+6. 檢查 API Response 包含的屬性：subscription_tier（應為 premium） subscription_cycle_iso（如 monthly 或 yearly） subscription_cycle_first（應為 true 首次訂閱） subscription_channel（訂閱渠道） subscription_cancelled（應為 false） subscription_expiration_date（訂閱到期日） subscription_product_id（產品 ID）
+7. 等待 User Properties 同步（約 1-2 秒）
+8. 檢查 Third-Party 後台：Amplitude：驗證所有訂閱屬性 Appcues：驗證所有訂閱屬性 RevenueCat：驗證所有訂閱屬性（Boolean 轉 String）","Polling 機制正常運作（每 1 秒輪詢一次）
+API 回傳 updated = true 時停止輪詢
+所有訂閱屬性正確同步到 Third-Party
+RevenueCat 的 Boolean 屬性轉換為 String（如 true false）
+同步時間 < 10 秒（包含 Polling 時間）",P0,待測試,
+1.3,功能與業務邏輯測試,訂閱購買完成後 User Properties 同步測試 - Plus,驗證 Plus 訂閱購買完成後所有訂閱相關屬性正確同步到 Third-Party,"Android 設備已安裝 App
+測試帳號為 Free 用戶
+準備 Plus 訂閱購買（測試環境或沙盒環境）","1. 使用 Free 帳號登入 App
+2. 進入 Plus 訂閱購買頁面
+3. 選擇 Plus 訂閱方案（月付/年付）
+4. 完成訂閱購買流程
+5. 觀察 Polling 機制運作
+6. 檢查 API Response 包含的屬性：subscription_tier（應為 plus） 其他訂閱屬性
+7. 檢查 Third-Party 後台屬性同步","subscription_tier 為 plus
+所有訂閱屬性正確同步
+同步時間 < 10 秒",P0,待測試,
+1.4,功能與業務邏輯測試,訂閱續訂場景測試,驗證訂閱續訂時 subscription_cycle_first 正確同步為 false,"測試帳號已有 Premium 或 Plus 訂閱
+訂閱即將到期或已到期
+準備續訂流程","1. 使用已有訂閱的帳號登入 App
+2. 進入訂閱續訂流程
+3. 完成續訂購買
+4. 觀察 Polling 機制運作
+5. 檢查 API Response：subscription_cycle_first 應為 false（非首次訂閱） subscription_tier 保持不變 subscription_expiration_date 更新為新的到期日
+6. 檢查 Third-Party 後台屬性同步","subscription_cycle_first 為 false
+其他訂閱屬性正確更新
+屬性正確同步到 Third-Party",P1,待測試,
+1.5,功能與業務邏輯測試,訂閱取消場景測試,驗證訂閱取消時 subscription_cancelled 正確同步為 true,測試帳號已有 Premium 或 Plus 訂閱,"1. 使用已有訂閱的帳號登入 App
+2. 進入訂閱管理頁面
+3. 執行訂閱取消操作
+4. 等待訂閱狀態更新
+5. 檢查 API Response：subscription_cancelled 應為 true
+6. 檢查 Third-Party 後台屬性同步","subscription_cancelled 為 true
+屬性正確同步到 Third-Party",P1,待測試,
+1.6,功能與業務邏輯測試,Polling 機制 - 成功場景測試,驗證 Polling 機制在 API 回傳 updated = true 時正確停止,"準備訂閱購買流程
+模擬 API 在第一次輪詢時回傳 updated = true","1. 完成訂閱購買流程
+2. 觀察 Polling 機制：第一次輪詢（0 秒）：API 回傳 updated = true 驗證是否立即停止輪詢（不再進行後續輪詢）
+3. 檢查 Third-Party 後台屬性同步","第一次輪詢成功後立即停止
+不再進行後續輪詢
+屬性正確同步
+總等待時間 < 2 秒",P0,待測試,
+1.7,功能與業務邏輯測試,Polling 機制 - 最大重試次數測試,驗證 Polling 機制在達到最大重試次數（5 次）時正確停止,"準備訂閱購買流程
+模擬 API 在 5 次輪詢內都回傳 updated = false","1. 完成訂閱購買流程
+2. 觀察 Polling 機制：第一次輪詢（0 秒）：API 回傳 updated = false 第二次輪詢（1 秒）：API 回傳 updated = false 第三次輪詢（2 秒）：API 回傳 updated = false 第四次輪詢（3 秒）：API 回傳 updated = false 第五次輪詢（4 秒）：API 回傳 updated = false 驗證是否在 5 次後停止輪詢
+3. 檢查 Third-Party 後台屬性同步（可能未同步或使用回退機制）","準確執行 5 次輪詢
+每次輪詢間隔約 1 秒
+5 次後停止輪詢
+總等待時間約 5 秒
+有適當的錯誤處理或回退機制",P0,待測試,
+1.8,功能與業務邏輯測試,型態轉換測試 - Boolean 轉 String（RevenueCat）,驗證 Boolean 型態屬性正確轉換為 String 後同步到 RevenueCat,"準備硬體相機配對或訂閱購買流程
+準備 RevenueCat 後台查看工具","1. 完成硬體相機配對或訂閱購買
+2. 檢查 API Response 中的 Boolean 屬性：is_alfredcam_owner（Boolean） subscription_cycle_first（Boolean） subscription_cancelled（Boolean）
+3. 檢查 RevenueCat 後台：驗證 is_alfredcam_owner 為 String 型態（true 或 false） 驗證 subscription_cycle_first 為 String 型態（true 或 false） 驗證 subscription_cancelled 為 String 型態（true 或 false）
+4. 檢查 Amplitude Appcues 後台：驗證屬性保持 Boolean 型態","RevenueCat 的 Boolean 屬性轉換為 String
+Amplitude Appcues 的 Boolean 屬性保持 Boolean
+型態轉換正確無誤",P1,待測試,
+1.9,功能與業務邏輯測試,null 值處理測試,驗證 API Response 中 null 值屬性不會同步到 Third-Party,準備測試場景（如：用戶沒有訂閱時）,"1. 使用沒有訂閱的帳號登入 App
+2. 觸發 User Properties 同步（如：配對硬體相機）
+3. 檢查 API Response：某些訂閱屬性可能為 null（如 subscription_tier）
+4. 檢查 Third-Party 後台：驗證 null 值屬性不會更新到 Third-Party 驗證現有屬性值保持不變","null 值屬性被忽略不更新到 Third-Party
+現有屬性值保持不變
+無錯誤或異常",P2,待測試,
+1.10,功能與業務邏輯測試,空字串處理測試,驗證 API Response 中空字串屬性會同步到 Third-Party,準備測試場景（模擬 API 回傳空字串）,"1. 觸發 User Properties 同步
+2. 檢查 API Response：某些屬性可能為空字串（如 subscription_tier = ）
+3. 檢查 Third-Party 後台：驗證空字串屬性會更新到 Third-Party（視同給予參數）","空字串屬性會更新到 Third-Party
+空字串視同給予參數不是忽略",P2,待測試,
+1.11,功能與業務邏輯測試,Properties Cache 機制測試,驗證 Properties Cache 機制正常運作有變更才打上去,準備訂閱購買或配對流程,"1. 完成第一次訂閱購買或配對
+2. 檢查 Third-Party 後台屬性同步
+3. 再次觸發相同的操作（如同樣的訂閱購買）
+4. 檢查 Third-Party 後台：驗證相同值的屬性不會重複更新 驗證只有變更的屬性才會更新","Properties Cache 機制正常運作
+相同值不重複更新
+只有變更的屬性才會更新
+減少不必要的 API 調用",P1,待測試,
+1.12,功能與業務邏輯測試,向下兼容性測試 - 舊版 API Response,驗證舊版 Client 仍可使用既有 API Response 欄位,準備舊版 App（未更新 User Properties 同步機制）,"1. 使用舊版 App 完成硬體相機配對
+2. 檢查 API Response：驗證既有欄位仍然存在 驗證新增欄位不影響舊版 Client
+3. 驗證舊版 App 功能正常運作","舊版 Client 仍可使用既有欄位
+新增欄位不影響舊版 Client
+向下兼容性正常",P1,待測試,
+2.1,穩定性與可靠性測試,網路異常 - API 失敗處理測試,驗證 API 失敗時的回退機制和錯誤處理,"準備訂閱購買流程
+模擬 API 失敗（網路中斷 API 錯誤等）","1. 完成訂閱購買流程
+2. 在 Polling 過程中模擬 API 失敗：網路中斷 API 返回錯誤（如 500 503） API Timeout
+3. 觀察 Polling 機制：驗證是否繼續重試（最多 5 次） 驗證錯誤處理邏輯
+4. 檢查是否有回退機制（如：使用舊版 RC 屬性同步）","API 失敗時繼續重試（最多 5 次）
+有適當的錯誤處理
+有回退機制（如：使用舊版同步機制）
+App 不會崩潰或異常",P1,待測試,
+2.2,穩定性與可靠性測試,弱網環境測試,驗證弱網環境下 User Properties 同步的穩定性,準備弱網環境（如：網路限速不穩定連線）,"1. 設定弱網環境（網路限速至 3G 速度）
+2. 完成硬體相機配對或訂閱購買
+3. 觀察 Polling 機制：驗證在弱網環境下是否正常運作 驗證輪詢間隔是否正確（約 1 秒）
+4. 檢查 Third-Party 後台屬性同步","弱網環境下 Polling 機制正常運作
+屬性最終能正確同步（可能需要更長時間）
+無崩潰或異常",P1,待測試,
+2.3,穩定性與可靠性測試,網路中斷恢復測試,驗證網路中斷恢復後 User Properties 同步的恢復能力,準備訂閱購買流程,"1. 完成訂閱購買流程
+2. 在 Polling 過程中中斷網路
+3. 等待 3 秒
+4. 恢復網路連線
+5. 觀察 Polling 機制：驗證是否繼續重試 驗證是否能在剩餘次數內成功
+6. 檢查 Third-Party 後台屬性同步","網路恢復後繼續重試
+能在剩餘次數內成功同步
+屬性最終正確同步",P1,待測試,
+2.4,穩定性與可靠性測試,長時間連線穩定性測試,驗證長時間使用 App 後 User Properties 同步機制仍正常運作,準備測試帳號,"1. 使用測試帳號登入 App
+2. 正常使用 App 30 分鐘以上
+3. 執行多次操作：配對硬體相機 購買訂閱 取消訂閱
+4. 每次操作後檢查 Third-Party 後台屬性同步
+5. 檢查 App 記憶體使用和效能","長時間使用後同步機制仍正常運作
+無記憶體洩漏
+無效能下降
+屬性同步準確性不變",P2,待測試,
+2.5,穩定性與可靠性測試,並發操作測試,驗證同時進行多個操作時 User Properties 同步的正確性,準備多個測試帳號,"1. 同時使用多個帳號登入 App
+2. 同時執行多個操作：帳號 A：配對硬體相機 帳號 B：購買 Premium 訂閱 帳號 C：購買 Plus 訂閱
+3. 觀察每個操作的 Polling 機制
+4. 檢查 Third-Party 後台：驗證每個帳號的屬性正確同步 驗證屬性不會混淆","並發操作下同步機制正常運作
+每個帳號的屬性正確同步
+屬性不會混淆
+無競態條件或資料錯誤",P2,待測試,
+3.1,使用者體驗測試,訂閱購買流程體驗測試,驗證訂閱購買流程的用戶體驗不受 Polling 機制影響,準備訂閱購買流程,"1. 進入 Premium 訂閱購買頁面
+2. 選擇訂閱方案
+3. 完成訂閱購買流程
+4. 觀察用戶體驗：購買完成後是否有明顯延遲 是否有載入指示器 用戶是否能正常使用 Premium 功能
+5. 檢查 Third-Party 後台屬性同步","購買流程順暢無明顯延遲
+用戶能立即使用 Premium 功能（即使屬性仍在同步中）
+Polling 機制不影響用戶體驗
+總等待時間控制在 5 秒內",P1,待測試,
+3.2,使用者體驗測試,配對流程體驗測試,驗證硬體相機配對流程的用戶體驗不受新增欄位影響,準備硬體相機配對流程,"1. 進入硬體相機配對流程
+2. 掃描 QR Code 或輸入配對碼
+3. 完成配對流程
+4. 觀察用戶體驗：配對完成後是否有明顯延遲 是否能立即使用相機功能
+5. 檢查 Third-Party 後台屬性同步","配對流程順暢無明顯延遲
+用戶能立即使用相機功能
+新增欄位不影響用戶體驗",P1,待測試,
+4.1,效能測試,Polling 機制效能測試,驗證 Polling 機制對 App 效能和電池消耗的影響,"準備訂閱購買流程
+準備效能監控工具","1. 啟動效能監控工具
+2. 完成訂閱購買流程
+3. 監控 Polling 機制期間：CPU 使用率 記憶體使用 網路流量 電池消耗
+4. 分析效能影響","CPU 使用率增加 < 5%（參考值）
+記憶體使用增加 < 5MB（參考值）
+網路流量：最多 5 次 API 調用
+電池消耗增加在合理範圍內
+總影響時間 < 5 秒",P2,待測試,
+4.2,效能測試,屬性同步延遲測試,驗證屬性同步的延遲時間符合預期（即時同步）,"準備配對或訂閱流程
+準備時間測量工具","1. 完成硬體相機配對或訂閱購買
+2. 記錄操作完成時間（T1）
+3. 檢查 Third-Party 後台記錄屬性同步時間（T2）
+4. 計算延遲時間：T2 - T1
+5. 重複測試 10 次計算平均延遲時間","配對完成後同步延遲 < 5 秒
+訂閱購買完成後同步延遲 < 10 秒（包含 Polling 時間）
+平均延遲時間符合預期
+相比 Server Side 同步（5-10 分鐘）大幅改善",P1,待測試,
+5.1,迴歸測試,硬體相機配對功能迴歸測試,驗證硬體相機配對功能未受影響,"準備硬體相機（AC101/AC201/AC202）
+準備測試帳號","1. 測試 AC101 配對流程
+2. 測試 AC201 配對流程
+3. 測試 AC202 配對流程
+4. 驗證配對完成後：相機正常顯示在列表中 能正常進入 Live 畫面 能正常觀看即時影像 配對狀態正確","所有硬體相機配對功能正常
+配對流程與之前版本一致
+無回歸問題",P1,待測試,
+5.2,迴歸測試,訂閱購買功能迴歸測試,驗證訂閱購買功能未受影響,"準備測試帳號
+準備訂閱購買流程","1. 測試 Premium 訂閱購買（月付）
+2. 測試 Premium 訂閱購買（年付）
+3. 測試 Plus 訂閱購買（月付）
+4. 測試 Plus 訂閱購買（年付）
+5. 驗證訂閱購買完成後：訂閱狀態正確更新 Premium/Plus 功能正常解鎖 訂閱管理頁面顯示正確","所有訂閱購買功能正常
+訂閱狀態正確更新
+Premium/Plus 功能正常解鎖
+無回歸問題",P1,待測試,
+5.3,迴歸測試,用戶權限與訂閱迴歸測試,驗證用戶權限與訂閱功能未受影響,準備不同類型的測試帳號（Free Premium Plus）,"1. 測試 Free 用戶權限：驗證免費功能正常 驗證付費功能限制正確
+2. 測試 Premium 用戶權限：驗證 Premium 功能正常解鎖 驗證廣告不顯示
+3. 測試 Plus 用戶權限：驗證 Plus 功能正常解鎖 驗證廣告不顯示
+4. 測試訂閱轉換：Free → Premium Free → Plus Premium → Plus Plus → Premium","所有用戶權限功能正常
+訂閱轉換正常
+無回歸問題",P1,待測試,
+5.4,迴歸測試,現有 User Properties 同步迴歸測試,驗證現有的 Server Side User Properties 同步機制未受影響,準備測試帳號,"1. 執行各種操作（登入配對訂閱等）
+2. 等待 Server Side 同步（5-10 分鐘）
+3. 檢查 Third-Party 後台：驗證現有屬性仍然正確同步 驗證新屬性與現有屬性不衝突
+4. 驗證 Client 端和 Server Side 同步共存","現有 Server Side 同步機制正常運作
+新屬性與現有屬性不衝突
+Client 端和 Server Side 同步共存正常",P1,待測試,

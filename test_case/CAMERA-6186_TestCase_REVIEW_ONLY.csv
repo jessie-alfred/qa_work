@@ -1,0 +1,62 @@
+﻿測試案例編號,測試分類,測試標題,測試目標,測試步驟,預期結果,優先級,狀態,備註
+1.1,功能與業務邏輯測試,Camera 端 Logger 機制啟動測試 ⭐ P0,驗證 Camera 端 Logger 機制在第一次 XMPP 連線成功後正確啟動,,"Logger 機制在第一次 XMPP 連線成功後正確啟動
+每 1 小時記錄一次
+記錄內容包含離線時長統計（offline array，0-23 小時）",P1,待測試,
+1.2,功能與業務邏輯測試,Camera 端離線時長累計測試 ⭐ P0,驗證 Camera 端正確累計 xmpp_disconnect → xmpp_connected 之間的斷線時長,,"離線時長正確累計
+多次斷線的時長正確累計
+斷線時長記錄在對應的時段（小時）中",P1,待測試,
+1.3,功能與業務邏輯測試,Camera 端上報機制測試 - Debug 環境 ⭐ P0,驗證 Debug 環境中上報機制正常運作（每 10 分鐘檢查一次）,,"Debug 環境每 10 分鐘檢查一次
+上報條件：必須滿足整點才會上傳
+上報的 Payload 格式正確，時間切齊整點",P1,待測試,
+1.4,功能與業務邏輯測試,Camera 端 Cache 管理測試 - 上報成功/失敗 ⭐ P0,驗證上報成功後 Cache 正確清空，失敗後保留,,"上報成功後 Cache 正確清空
+上報失敗後 Cache 正確保留
+下次上報時包含之前保留的資料",P1,待測試,
+1.5,功能與業務邏輯測試,iOS App 退到背景處理測試 ⭐ P1,驗證 iOS App 退到背景時正確丟棄資料,,"iOS App 退到背景時 Cache 正確丟棄（尚未上報的資料）
+App 回到前景時重新開始記錄（startTime 重新設定）",P1,待測試,
+1.6,功能與業務邏輯測試,使用者登出處理測試 ⭐ P1,驗證使用者登出時 Cache 正確清空,,"使用者登出時 Cache 正確清空
+重新登入後重新開始記錄（startTime 重新設定）",P1,待測試,
+2.1,穩定性與可靠性測試,Viewer 端版本判斷測試 - 舊版 Camera (cameraHealth = 1) ⭐ P0,驗證 Viewer 端正確判斷舊版 Camera 並顯示舊版 WebView,,"Viewer 端正確判斷舊版 Camera（cameraHealth = 1）
+開啟舊版 WebView（stats/offline.html）
+舊版 WebView 內容正常顯示",P1,待測試,
+2.2,穩定性與可靠性測試,Viewer 端版本判斷測試 - 新版 Camera (cameraHealth = 2) ⭐ P0,驗證 Viewer 端正確判斷新版 Camera 並顯示新版 Native UI,,"Viewer 端正確判斷新版 Camera（cameraHealth = 2）
+開啟新版 Native UI（而非 WebView）
+新版 UI 內容正常顯示",P1,待測試,
+2.3,穩定性與可靠性測試,Viewer 端時間軸顏色標示測試 ⭐ P0,驗證 Viewer 端正確顯示時間軸顏色標示,,"離線 0-5 秒的時段顯示為綠色
+離線 6-1440 秒的時段顯示為黃色
+離線 >1441 秒的時段顯示為紅色
+無資料的時段（null）顯示為灰色
+時段標示正確",P1,待測試,
+2.4,穩定性與可靠性測試,Viewer 端時區轉換測試 ⭐ P1,驗證 Viewer 端正確處理時區轉換（UTC 儲存，顯示時轉換為使用者時區）,,"Viewer 端正確處理時區轉換
+時間軸顯示的時間為使用者時區
+時段對應正確（UTC 與本地時區的轉換）",P1,待測試,
+3.1,使用者體驗測試,POST /device/v1/stats API 測試 - 正常上報 ⭐ P0,驗證 POST /device/v1/stats API 正常上報離線統計資料,,"POST API 正常上報
+Request 格式正確（Header：Authorization: Bearer KV_TOKEN；Body：start_time, end_time, offline array）
+Response 格式正確，Status Code 為 201，包含 status_code: ""succeeded""",P2,待測試,
+3.2,使用者體驗測試,GET /device/v1/stats/:jid API 測試 - 正常查詢 ⭐ P0,驗證 GET /device/v1/stats/:jid API 正常查詢離線統計資料,,"GET API 正常查詢
+Request 格式正確（Header：Authorization: Bearer KV_TOKEN；URL：jid URL encode；Query Params：start_date, end_date, timezone）
+Response 格式正確，Status Code 為 200，包含 status_code: ""succeeded""、data.offline_stats array",P2,待測試,
+3.3,使用者體驗測試,GET /device/v1/stats/:jid API 測試 - 日期範圍查詢 ⭐ P1,驗證 GET API 正確處理日期範圍查詢,,"API 正確處理日期範圍查詢
+單日查詢（start_date = end_date）返回 1 個物件
+多日查詢返回對應數量的物件",P2,待測試,
+4.1,效能測試,短暫斷線進位測試 ⭐ P1,驗證斷線時間小於 1 秒時，無條件進位到 1 秒上報,,"斷線時間小於 1 秒時，無條件進位到 1 秒上報
+上報的 Payload 中對應時段顯示 1 秒（而非 0 秒）",P2,待測試,
+4.2,效能測試,超長斷線測試（跨多個小時） ⭐ P1,驗證超長斷線（跨多個小時）時，離線時長正確累計和上報,,"超長斷線時，離線時長正確累計到對應的時段
+上報的 Payload 包含所有受影響的時段
+每個時段的離線時長計算正確",P2,待測試,
+4.3,效能測試,跨日上報測試 ⭐ P1,驗證跨日時上報機制正常運作,,"跨日時上報機制正常運作
+上報的 Payload 日期正確（前一天的 23:00:00 至當天的 00:00:00）
+跨日後的資料正確記錄和上報",P2,待測試,
+5.1,迴歸測試,舊版 Camera 顯示測試 ⭐ P0,驗證舊版 Camera（cameraHealth = 1）仍正常顯示舊版 WebView,,"舊版 Camera 仍正常顯示舊版 WebView（stats/offline.html）
+舊版 WebView 功能正常
+舊版 WebView 內容正常顯示",P1,待測試,
+5.2,迴歸測試,XMPP 連線功能測試 ⭐ P0,驗證 XMPP 連線功能不受影響,,"XMPP 連線功能正常
+XMPP 斷線和恢復正常
+Camera 狀態顯示正確",P1,待測試,
+5.3,迴歸測試,即時影像功能測試 ⭐ P0,驗證即時影像功能不受影響,,"即時影像功能正常
+即時影像延遲在合理範圍內
+即時影像中斷和恢復正常",P1,待測試,
+6.1,整合測試 (Integration Tests),端到端測試 - 完整流程 ⭐ P0,驗證從 Camera 端上報到 Viewer 端顯示的完整流程,,"完整流程正常運作
+Camera 端上報成功
+Viewer 端正確顯示資料
+時間軸顏色標示正確（如：10 分鐘 = 600 秒，介於 6-1440 秒，應顯示為黃色）
+時區轉換正確",P1,待測試,

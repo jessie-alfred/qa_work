@@ -1,0 +1,899 @@
+﻿測試案例編號,測試分類,測試標題,測試目標,前置條件,測試步驟,預期結果,優先級,狀態,備註
+1.1,功能與業務邏輯測試,Embedded/SW Camera 端連線狀態監控測試 ⭐ P0,驗證 Embedded/SW Camera 端正確監控 XMPP 連線狀態（online/offline 轉換）,"Embedded/SW Camera 裝置（AC101/AC201/AC202）已安裝新版本韌體（1.20.0）
+Embedded/SW Camera 裝置已配對並登入
+網路連線正常
+XMPP 連線正常","確認 Embedded/SW Camera 裝置 XMPP 連線狀態為 online
+透過 Viewer 端或 API 監控 Embedded/SW Camera 裝置的連線狀態
+模擬網路中斷（如：關閉路由器或切斷網路連線）
+觀察 Embedded/SW Camera 端是否正確偵測到 offline 狀態
+恢復網路連線
+觀察 Embedded/SW Camera 端是否正確偵測到 online 狀態
+檢查連線狀態轉換的即時性（應在數秒內完成狀態轉換）
+驗證連線狀態記錄是否正確","Embedded/SW Camera 端正確監聽 XMPP 連線狀態轉換
+online/offline 狀態轉換準確且即時（數秒內完成）
+連線狀態記錄正確",P0,待測試,
+1.2,功能與業務邏輯測試,Embedded/SW Camera 端離線時長累計測試 ⭐ P0,驗證 Embedded/SW Camera 端正確累計離線時長,"Embedded/SW Camera 裝置已啟動連線狀態監控
+XMPP 連線正常","確認 Embedded/SW Camera 裝置 XMPP 連線狀態為 online
+記錄當前時間（T1，範例：2026-01-20T13:30:00Z）
+模擬網路中斷（如：關閉路由器）
+等待 5 分鐘（實際斷線時間：5 分鐘 = 300 秒）
+記錄斷線時間（T2，範例：2026-01-20T13:30:00Z）
+恢復網路連線
+等待 XMPP 重新連線成功
+記錄重新連線時間（T3，範例：2026-01-20T13:35:00Z）
+檢查離線時長是否正確累計：
+- 計算離線時長：T3 - T2 = 5 分鐘 = 300 秒
+- 確認離線時長記錄在對應的時段（13:00-14:00，對應 offline[13]）
+- 確認 offline[13] 為 300
+重複步驟 2-9，模擬第二次斷線（等待 3 分鐘 = 180 秒）
+- 斷線時間：14:10-14:13（對應 14:00-15:00 時段，offline[14]）
+檢查累計的離線時長是否正確：
+- 第一次斷線：offline[13] = 300 秒
+- 第二次斷線：offline[14] = 180 秒
+- 確認兩次斷線時長分別記錄在對應的時段中
+驗證離線時長記錄在對應的時段（小時）中：
+- 13:00-14:00 時段的斷線記錄在 offline[13]
+- 14:00-15:00 時段的斷線記錄在 offline[14]","離線時長正確累計
+多次斷線的時長正確累計
+離線時長記錄在對應的時段（小時）中",P0,待測試,
+1.3,功能與業務邏輯測試,Embedded/SW Camera 端 API 上傳測試 - 正常上報 ⭐ P0,驗證 Embedded/SW Camera 端正確上傳 Connection Report 資料到新的 /device/v1/stats API,"Embedded/SW Camera 裝置已啟動連線狀態監控
+Embedded/SW Camera 裝置已累計離線時長資料
+網路連線正常
+API 服務正常運作","確認 Embedded/SW Camera 裝置已累計離線時長資料
+等待上報時機（開始 Logger + 1 hour，且必須滿足整點）
+使用網路封包監控工具（如：Wireshark、mitmproxy）監控 API 請求
+確認 Embedded/SW Camera 端呼叫的 API 端點為 POST /device/v1/stats（而非舊的 UploadOfflineStats）
+檢查 Request Body 格式：
+- 確認包含 start_time（UTC ISO DateTime 格式，帶 Z 後綴，範例：2026-01-21T02:54:34Z）
+- 確認 start_time 為 app 啟動連上線的實際時間（非整點）
+- 確認 start_time 為 UTC 時間（無論 Embedded/SW Camera 裝置本地時區為何，都必須轉換為 UTC）
+- 確認包含 end_time（UTC ISO DateTime 格式，帶 Z 後綴，範例：2026-01-21T03:00:00Z）
+- 確認 end_time 為切齊整點的時間
+- 確認 end_time 為 UTC 時間（無論 Embedded/SW Camera 裝置本地時區為何，都必須轉換為 UTC）
+- 確認包含 offline array（24 個元素，對應 0-23 小時，單位為秒）
+- 範例 Payload：
+`json
+{
+""start_time"": ""2026-01-21T02:54:34Z"",
+""end_time"": ""2026-01-21T03:00:00Z"",
+""offline"": [0]
+}
+`
+- start_time: app 啟動連上線的實際時間（2026-01-21 02:54:34 UTC，非整點）
+- end_time: 切齊整點的時間（2026-01-21 03:00:00 UTC）
+檢查 Response：
+- Status Code 為 201（Created）
+- Response Body 格式正確（如：{""status_code"": ""succeeded""}）
+驗證上傳成功率（應為 100%）","Embedded/SW Camera 端正確呼叫新的 /device/v1/stats API（而非舊的 UploadOfflineStats）
+Request 格式正確（start_time, end_time, offline array）
+start_time 和 end_time 都必須是 UTC 格式（帶 Z 後綴）
+Response 格式正確，Status Code 為 201
+上傳成功率正常",P0,待測試,
+1.4,功能與業務邏輯測試,Embedded/SW Camera 端 API 上傳測試 - Payload 格式 ⭐ P0,驗證 Embedded/SW Camera 端上傳的 Payload 格式符合 API 規格,"Embedded/SW Camera 裝置已啟動連線狀態監控
+Embedded/SW Camera 裝置已累計離線時長資料
+網路連線正常","確認 Embedded/SW Camera 裝置已累計離線時長資料
+等待上報時機
+使用網路封包監控工具擷取 API 請求 Payload
+檢查 Payload 結構：
+- 確認包含 start_time 欄位
+- 確認 start_time 為 UTC ISO DateTime 格式（範例：2026-01-21T02:54:34Z）
+- 確認 start_time 格式符合 ISO 8601 標準（YYYY-MM-DDTHH:mm:ssZ）
+- 確認 start_time 為 app 啟動連上線的實際時間（非整點，如：2026-01-21T02:54:34Z）
+- 確認包含 end_time 欄位
+- 確認 end_time 為 UTC ISO DateTime 格式（範例：2026-01-21T03:00:00Z）
+- 確認 end_time 格式符合 ISO 8601 標準
+- 確認 end_time 為切齊整點的時間（如：2026-01-21T03:00:00Z）
+- 確認包含 offline array
+- 確認 offline array 長度為 24（對應 0-23 小時）
+- 確認 offline array 每個元素為整數（離線時長，單位為秒）
+檢查時間格式和時區：
+- 確認 start_time 為 UTC 格式（帶 Z 後綴）
+- 確認 start_time 為 app 啟動連上線的實際時間（非整點）
+- 確認 end_time 為 UTC 格式（帶 Z 後綴）
+- 確認 end_time 為切齊整點的時間
+- 範例 Payload：
+`json
+{
+""start_time"": ""2026-01-21T02:54:34Z"",
+""end_time"": ""2026-01-21T03:00:00Z"",
+""offline"": [0]
+}
+`
+- start_time: app 啟動連上線的實際時間（2026-01-21 02:54:34 UTC）
+- end_time: 切齊整點的時間（2026-01-21 03:00:00 UTC）
+檢查 offline array 內容：
+- 確認每個元素為非負整數（離線時長，單位為秒，範圍：0 到 3600）
+- 確認 offline[0] 對應 00:00-01:00 時段
+- 確認 offline[13] 對應 13:00-14:00 時段
+- 確認 offline[23] 對應 23:00-24:00 時段
+- 驗證對應時段的離線時長正確（如：在 13:30-13:35 斷線 5 分鐘，則 offline[13] 應為 300）
+檢查特殊規則：
+- 確認斷線時間小於 1 秒時，無條件進位到 1 秒（如：0.5 秒 → 1 秒）
+- 確認無離線時段的值為 0","Payload 包含 start_time（app 啟動連上線的實際時間，UTC ISO DateTime 格式，帶 Z 後綴，非整點）
+Payload 包含 end_time（切齊整點的時間，UTC ISO DateTime 格式，帶 Z 後綴）
+Payload 包含 offline array（24 小時的離線時長，單位為秒）
+start_time 和 end_time 都必須是 UTC 時間（無論本地時區為何）
+時間格式符合 ISO 8601 標準（YYYY-MM-DDTHH:mm:ssZ）",P0,待測試,
+1.5,功能與業務邏輯測試,Embedded/SW Camera 端時區轉換測試 - UTC 格式驗證 ⭐ P0,驗證 Embedded/SW Camera 端正確將本地時間轉換為 UTC 格式（帶 Z 後綴）,"Embedded/SW Camera 裝置已啟動連線狀態監控
+Embedded/SW Camera 裝置已累計離線時長資料
+網路連線正常
+可設定或確認 Embedded/SW Camera 裝置的時區設定","確認 Embedded/SW Camera 裝置的時區設定（如：UTC+8、UTC-5 等）
+記錄 Embedded/SW Camera 裝置的本地時間（如：2026-01-21 10:54:34 UTC+8）
+等待上報時機
+使用網路封包監控工具擷取 API 請求 Payload
+檢查 start_time 格式：
+- 確認 start_time 為 UTC ISO DateTime 格式（範例：2026-01-21T02:54:34Z）
+- 確認 start_time 格式符合 ISO 8601 標準（YYYY-MM-DDTHH:mm:ssZ）
+- 確認 start_time 以 Z 結尾（表示 UTC 時區）
+- 確認 start_time 為 app 啟動連上線的實際時間（非整點）
+- 驗證時區轉換正確：
+- 如果 Embedded/SW Camera 裝置時區為 UTC+8，本地時間 2026-01-21 10:54:34 應轉換為 UTC 2026-01-21T02:54:34Z
+- 如果 Embedded/SW Camera 裝置時區為 UTC-5，本地時間 2026-01-21 10:54:34 應轉換為 UTC 2026-01-21T15:54:34Z
+檢查 end_time 格式：
+- 確認 end_time 為 UTC ISO DateTime 格式（範例：2026-01-21T03:00:00Z）
+- 確認 end_time 格式符合 ISO 8601 標準（YYYY-MM-DDTHH:mm:ssZ）
+- 確認 end_time 以 Z 結尾（表示 UTC 時區）
+- 確認 end_time 為切齊整點的時間（如：03:00:00、04:00:00、05:00:00 等）
+- 驗證時區轉換正確（與 start_time 使用相同的時區轉換規則）
+驗證時間格式範例：
+- 範例 Payload：
+`json
+{
+""start_time"": ""2026-01-21T02:54:34Z"",
+""end_time"": ""2026-01-21T03:00:00Z"",
+""offline"": [0]
+}
+`
+- 確認 start_time 為 app 啟動連上線的實際時間（非整點，如：02:54:34）
+- 確認 end_time 為切齊整點的時間（如：03:00:00）
+- 確認 start_time 和 end_time 都是 UTC 時間（帶 Z 後綴）
+- 確認時間格式正確（無時區偏移符號，如：+08:00 或 -05:00）
+測試不同時區設定：
+- 設定 Embedded/SW Camera 裝置時區為 UTC+8，驗證轉換正確
+- 設定 Embedded/SW Camera 裝置時區為 UTC-5，驗證轉換正確
+- 設定 Embedded/SW Camera 裝置時區為 UTC+0，驗證轉換正確（應與本地時間相同）
+驗證跨日轉換：
+- 如果本地時間為 2026-01-21 23:54:34 UTC+8，應轉換為 UTC 2026-01-21T15:54:34Z
+- 如果本地時間為 2026-01-22 00:54:34 UTC+8，應轉換為 UTC 2026-01-21T16:54:34Z（跨日）","start_time 為 app 啟動連上線的實際時間（非整點），且必須是 UTC 格式（帶 Z 後綴）
+end_time 為切齊整點的時間，且必須是 UTC 格式（帶 Z 後綴）
+時區轉換正確（本地時間正確轉換為 UTC 時間）
+時間格式符合 ISO 8601 標準（YYYY-MM-DDTHH:mm:ssZ）
+無時區偏移符號（如：+08:00 或 -05:00）",P0,待測試,
+1.6,功能與業務邏輯測試,Embedded/SW Camera 端上報時機測試 ⭐ P0,驗證 Embedded/SW Camera 端在正確的時機上報 Connection Report 資料,"Embedded/SW Camera 裝置已啟動連線狀態監控
+Embedded/SW Camera 裝置已累計離線時長資料
+網路連線正常","在 13:35 啟動 Embedded/SW Camera 裝置，開始 Logger（設定 startTime = 13:35）
+等待上報檢查時機（開始 Logger + 1 hour = 14:35）
+在 14:35 檢查是否嘗試上報
+- 預期：✅ 上傳 13:00~14:00 的資料（因為已滿足整點條件）
+檢查上報的 Payload：
+- start_time 為 app 啟動連上線的實際時間（如：2026-01-20T13:35:00Z，非整點，UTC 時間）
+- end_time 為 2026-01-20T14:00:00Z（切齊整點，UTC 時間）
+- offline array 包含 13:00-14:00 時段的離線時長（對應 offline[13]）
+在 14:00 啟動另一個 Embedded/SW Camera 裝置，開始 Logger（設定 startTime = 14:00）
+等待上報檢查時機（開始 Logger + 1 hour = 15:00）
+在 15:00 檢查是否嘗試上報
+- 預期：✅ 上傳 14:00~15:00 的資料（因為已滿足整點條件）
+檢查上報的 Payload：
+- start_time 為 app 啟動連上線的實際時間（如：2026-01-20T14:00:00Z，UTC 時間）
+- end_time 為 2026-01-20T15:00:00Z（切齊整點，UTC 時間）
+- offline array 包含 14:00-15:00 時段的離線時長（對應 offline[14]）
+驗證上報頻率：
+- Debug 環境：每 10 分鐘檢查一次（如：14:35, 14:45, 14:55, 15:05...）
+- Production 環境：每 60 分鐘檢查一次（如：14:35, 15:35, 16:35...）
+驗證上報條件：
+- 必須滿足整點才會上傳（如：14:00, 15:00, 16:00...）
+- 非整點時不上傳（如：14:35, 14:45, 14:55...）","上報時機符合規格（開始 Logger + 1 hour）
+上報條件：必須滿足整點才會上傳
+上報頻率正常（Debug 環境每 10 分鐘檢查，Production 每 60 分鐘檢查）",P0,待測試,
+1.7,功能與業務邏輯測試,Embedded/SW Camera 端 Cache 管理測試 ⭐ P0,驗證 Embedded/SW Camera 端正確管理 Cache（上報成功清空、失敗保留）,"Embedded/SW Camera 裝置已啟動連線狀態監控
+Embedded/SW Camera 裝置已累計離線時長資料
+網路連線正常","確認 Embedded/SW Camera 裝置已累計離線時長資料（Cache 中有資料）
+- 範例 Cache 資料：{start_time: ""2026-01-20T13:35:00Z"", offline: [0,0,0,0,0,0,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0]}
+- 註：start_time 為 app 啟動連上線的實際時間（非整點）
+等待上報時機
+確認網路連線正常
+執行上報
+檢查上報是否成功：
+- Status Code 為 201（Created）
+- Response Body：{""status_code"": ""succeeded""}
+檢查 Cache 是否已清空（應為空或重置）
+重新累計離線時長資料（Cache 中有新資料）
+- 範例新 Cache 資料：{start_time: ""2026-01-20T14:15:00Z"", offline: [0,0,0,0,0,0,0,0,0,0,0,0,0,0,180,0,0,0,0,0,0,0,0,0]}
+- 註：start_time 為 app 啟動連上線的實際時間（非整點）
+等待下次上報時機
+模擬網路異常（如：關閉路由器）
+執行上報（應失敗）
+- Status Code：網路錯誤或 500/503
+檢查 Cache 是否保留（應包含之前的資料）
+- 確認 Cache 中的 offline[14] 仍為 180
+恢復網路連線
+等待下次上報時機
+執行上報（應成功）
+檢查上報的 Payload 是否包含之前保留的資料：
+- 確認 offline[14] 為 180（之前保留的資料）
+- 確認 Payload 包含完整的 24 小時資料","上報成功後 Cache 正確清空
+上報失敗後 Cache 正確保留
+下次上報時包含之前保留的資料",P0,待測試,
+2.1,穩定性與可靠性測試,SD 卡 Fatal 錯誤處理測試 ⭐ P0,驗證 Embedded/SW Camera 端正確處理 SD 卡 Fatal 錯誤,"Embedded/SW Camera 裝置已安裝 SD 卡
+Embedded/SW Camera 裝置正常運作","確認 Embedded/SW Camera 裝置 SD 卡正常運作
+模擬 SD 卡 Fatal 錯誤（如：移除 SD 卡、損壞 SD 卡檔案系統）
+觀察 Embedded/SW Camera 端是否正確偵測到 SD 卡 Fatal 錯誤
+檢查 NotifySdCardError 介面是否正常運作（應被呼叫）
+檢查 HasSdCardIssue() 方法是否正確返回 true
+檢查錯誤分類是否正確（應分類為 Fatal 錯誤）
+檢查錯誤處理機制是否正常運作（如：停止錄影、顯示錯誤訊息）","NotifySdCardError 介面正常運作
+SD 卡 Fatal 錯誤正確分類和處理
+HasSdCardIssue() 方法正確判斷 Fatal 錯誤",P0,待測試,
+2.2,穩定性與可靠性測試,SD 卡一般錯誤處理測試 ⭐ P0,驗證 Embedded/SW Camera 端正確處理 SD 卡一般錯誤,"Embedded/SW Camera 裝置已安裝 SD 卡
+Embedded/SW Camera 裝置正常運作","確認 Embedded/SW Camera 裝置 SD 卡正常運作
+模擬 SD 卡一般錯誤（如：SD 卡空間不足、寫入速度慢）
+觀察 Embedded/SW Camera 端是否正確偵測到 SD 卡一般錯誤
+檢查錯誤分類是否正確（應分類為一般錯誤，而非 Fatal 錯誤）
+檢查 HasSdCardIssue() 方法是否正確返回 true
+檢查錯誤處理機制是否正常運作（如：降級錄影品質、顯示警告訊息）
+檢查 ResetSdCardError 介面是否正常運作（當錯誤恢復時）","SD 卡一般錯誤正確分類和處理
+ResetSdCardError 介面正常運作
+HasSdCardIssue() 方法正確判斷一般錯誤",P0,待測試,
+2.3,穩定性與可靠性測試,SD 卡錯誤恢復測試 ⭐ P1,驗證 Embedded/SW Camera 端正確處理 SD 卡錯誤恢復,"Embedded/SW Camera 裝置已發生 SD 卡錯誤
+HasSdCardIssue() 方法返回 true","確認 Embedded/SW Camera 裝置 SD 卡錯誤狀態（HasSdCardIssue() 返回 true）
+修復 SD 卡錯誤（如：重新插入 SD 卡、格式化 SD 卡、清理 SD 卡空間）
+觀察 Embedded/SW Camera 端是否正確偵測到 SD 卡錯誤恢復
+檢查 ResetSdCardError 介面是否正常運作（應被呼叫）
+檢查 HasSdCardIssue() 方法是否正確返回 false
+檢查錄影功能是否正常運作（應能正常錄影）
+驗證錄影品質是否恢復正常","SD 卡錯誤恢復後，HasSdCardIssue() 方法正確返回 false
+錄影功能在錯誤恢復後正常運作",P1,待測試,
+3.1,使用者體驗測試,HasNetworkIssue() 方法測試 ⭐ P0,驗證 HasNetworkIssue() 方法判斷邏輯正確,"Embedded/SW Camera 裝置正常運作
+網路連線正常","確認 Embedded/SW Camera 裝置網路連線正常
+檢查 HasNetworkIssue() 方法返回值（應為 false）
+模擬網路異常（如：關閉路由器、切斷網路連線）
+等待數秒，讓 Embedded/SW Camera 端偵測到網路異常
+檢查 HasNetworkIssue() 方法返回值（應為 true）
+恢復網路連線
+等待數秒，讓 Embedded/SW Camera 端偵測到網路恢復
+檢查 HasNetworkIssue() 方法返回值（應為 false）
+驗證判斷邏輯的即時性（應在數秒內完成狀態轉換）","網路正常時，HasNetworkIssue() 返回 false
+網路異常時，HasNetworkIssue() 返回 true
+判斷邏輯準確且即時",P0,待測試,
+3.2,使用者體驗測試,HasSdCardIssue() 方法測試 ⭐ P0,驗證 HasSdCardIssue() 方法判斷邏輯正確,"Embedded/SW Camera 裝置已安裝 SD 卡
+Embedded/SW Camera 裝置正常運作","確認 Embedded/SW Camera 裝置 SD 卡正常運作
+檢查 HasSdCardIssue() 方法返回值（應為 false）
+模擬 SD 卡異常（如：移除 SD 卡、損壞 SD 卡檔案系統）
+等待數秒，讓 Embedded/SW Camera 端偵測到 SD 卡異常
+檢查 HasSdCardIssue() 方法返回值（應為 true）
+修復 SD 卡異常（如：重新插入 SD 卡）
+等待數秒，讓 Embedded/SW Camera 端偵測到 SD 卡恢復
+檢查 HasSdCardIssue() 方法返回值（應為 false）
+驗證判斷邏輯的即時性（應在數秒內完成狀態轉換）","SD 卡正常時，HasSdCardIssue() 返回 false
+SD 卡異常時，HasSdCardIssue() 返回 true
+判斷邏輯準確且即時",P0,待測試,
+4.1,效能測試,即時影像功能測試 ⭐ P0,驗證即時影像功能不受影響,"Embedded/SW Camera 裝置已配對
+Viewer 端設備（iOS/Android）
+網路連線正常","在 Viewer 端開啟即時影像
+確認即時影像正常顯示
+觀察即時影像延遲（應在合理範圍內，如：小於 2 秒）
+模擬網路中斷
+觀察即時影像是否正確中斷
+恢復網路連線
+觀察即時影像是否正確恢復
+驗證連線狀態監控邏輯變更不影響即時串流的穩定性判斷","即時影像功能正常
+即時影像延遲在合理範圍內
+連線狀態監控邏輯變更不影響即時串流的穩定性判斷",P0,待測試,
+4.2,效能測試,錄影功能測試 ⭐ P0,驗證錄影功能不受影響,"Embedded/SW Camera 裝置已安裝 SD 卡
+Embedded/SW Camera 裝置正常運作","確認 Embedded/SW Camera 裝置 SD 卡正常運作
+觸發事件錄影（如：移動偵測）
+確認錄影功能正常運作
+檢查錄影檔案是否正確儲存到 SD 卡
+檢查錄影品質是否正常
+模擬 SD 卡錯誤（如：移除 SD 卡）
+觸發事件錄影
+檢查錄影失敗的偵測機制是否正常運作
+修復 SD 卡錯誤
+觸發事件錄影
+檢查錄影恢復機制是否正常運作
+驗證 SD 卡錯誤處理邏輯簡化不影響錄影失敗的偵測和恢復機制","錄影功能正常
+SD 卡錯誤處理邏輯簡化不影響錄影失敗的偵測和恢復機制
+錄影品質正常",P0,待測試,
+4.3,效能測試,事件偵測功能測試 ⭐ P0,驗證事件偵測功能不受影響,"Embedded/SW Camera 裝置正常運作
+移動偵測功能已啟用","確認 Embedded/SW Camera 裝置移動偵測功能已啟用
+在相機前移動（觸發移動偵測）
+確認事件偵測功能正常運作
+確認事件通知正常發送
+模擬網路異常
+在相機前移動（觸發移動偵測）
+檢查事件偵測是否正常運作（應能正常偵測，但通知可能延遲）
+恢復網路連線
+在相機前移動（觸發移動偵測）
+確認事件偵測和通知功能正常運作
+驗證健康狀態檢查邏輯簡化不影響事件偵測的可靠性和通知的準確性","事件偵測功能正常
+健康狀態檢查邏輯簡化不影響事件偵測的可靠性和通知的準確性
+事件通知正常",P0,待測試,
+5.1,迴歸測試,長時間運行測試 ⭐ P1,驗證 Embedded/SW Camera 端長時間運行時，Connection Report 上報機制穩定,"Embedded/SW Camera 裝置正常運作
+網路連線正常","啟動 Embedded/SW Camera 裝置，開始連線狀態監控
+讓 Embedded/SW Camera 裝置持續運行 24 小時
+定期檢查（每 1 小時）：
+- 連線報告的週期性上傳是否正常運作
+- 資料累積的穩定性是否正常
+- 系統是否穩定（無崩潰或異常）
+檢查系統日誌，確認無錯誤或警告訊息","連線報告的週期性上傳正常運作
+資料累積的穩定性正常
+無崩潰或異常",P1,待測試,
+6.1,API 整合測試,API 端點變更測試 ⭐ P0,驗證 Embedded/SW Camera 端使用新的 API 端點（/device/v1/stats）,"Embedded/SW Camera 裝置已啟動連線狀態監控
+Embedded/SW Camera 裝置已累計離線時長資料
+網路連線正常","確認 Embedded/SW Camera 裝置已累計離線時長資料
+等待上報時機
+使用網路封包監控工具監控 API 請求
+確認 Embedded/SW Camera 端呼叫的 API 端點為 /device/v1/stats
+確認 Embedded/SW Camera 端不再使用舊的 UploadOfflineStats API
+確認 Embedded/SW Camera 端正確使用新的 UploadDeviceStats API
+驗證 API 呼叫成功（Status Code 為 201）","Embedded/SW Camera 端不再使用舊的 UploadOfflineStats API
+Embedded/SW Camera 端正確使用新的 UploadDeviceStats API（/device/v1/stats 端點）
+API 呼叫成功",P0,待測試,
+6.2,API 整合測試,API 錯誤處理測試 ⭐ P1,驗證 Embedded/SW Camera 端正確處理 API 錯誤情況,"Embedded/SW Camera 裝置已啟動連線狀態監控
+Embedded/SW Camera 裝置已累計離線時長資料","確認 Embedded/SW Camera 裝置已累計離線時長資料（Cache 中有資料）
+- 範例 Cache 資料：{start_time: ""2026-01-20T13:35:00Z"", offline: [0,0,0,0,0,0,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0]}
+- 註：start_time 為 app 啟動連上線的實際時間（非整點）
+等待上報時機
+模擬網路異常（如：關閉路由器）
+執行上報（應失敗）
+- Status Code：網路錯誤（如：Connection timeout、Network unreachable）
+- 或 HTTP 錯誤（如：503 Service Unavailable）
+檢查 Cache 是否保留（應包含之前的資料）
+- 確認 Cache 中的 offline[13] 仍為 300
+恢復網路連線
+等待下次上報時機
+執行上報（應成功）
+- Status Code 為 201
+檢查上報的 Payload 是否包含之前保留的資料：
+- 確認 offline[13] 為 300（之前保留的資料）
+- 確認 Payload 包含完整的 24 小時資料
+模擬 API 返回錯誤（如：500 Internal Server Error）
+- 使用 API Mock 工具或修改 API 回應
+- Status Code：500
+- Response Body：{""error"": ""Internal Server Error""}
+檢查 Embedded/SW Camera 端是否正確處理錯誤：
+- 確認錯誤被正確記錄
+- 確認不會導致系統崩潰
+檢查 Cache 是否保留：
+- 確認 Cache 中的資料未丟失
+- 確認下次上報時會重試","API 錯誤時（如：網路異常、API 返回錯誤），Embedded/SW Camera 端正確處理
+上報失敗後 Cache 保留
+下次上報時包含之前保留的資料",P1,待測試,
+7.1,邊緣案例測試,短暫斷線進位測試 ⭐ P1,驗證斷線時間小於 1 秒時，無條件進位到 1 秒上報,"Embedded/SW Camera 裝置已啟動連線狀態監控
+網路連線正常","確認 Embedded/SW Camera 裝置 XMPP 連線狀態為 online
+模擬極短暫的網路中斷（如：快速切換 Wi-Fi、短暫的網路抖動）
+確保斷線時間小於 1 秒（如：0.5 秒）
+- 記錄斷線開始時間：T1（範例：2026-01-20T13:30:00.000Z）
+- 記錄斷線結束時間：T2（範例：2026-01-20T13:30:00.500Z）
+- 實際斷線時長：0.5 秒
+恢復網路連線
+等待 XMPP 重新連線成功
+等待上報時機（如：14:00）
+檢查上報的 Payload 中對應時段的離線時長：
+- 確認 offline[13]（13:00-14:00 時段）的值
+驗證離線時長是否為 1 秒（而非 0 秒或實際的 0.5 秒）：
+- 預期：offline[13] = 1（無條件進位規則）
+- 不應為：offline[13] = 0 或 0.5","斷線時間小於 1 秒時，無條件進位到 1 秒上報
+上報的 Payload 中對應時段顯示 1 秒（而非 0 秒）",P1,待測試,
+7.2,邊緣案例測試,超長斷線測試（跨多個小時） ⭐ P1,驗證超長斷線（跨多個小時）時，離線時長正確累計和上報,"Embedded/SW Camera 裝置已啟動連線狀態監控
+網路連線正常","確認 Embedded/SW Camera 裝置 XMPP 連線狀態為 online
+記錄當前時間（T1，範例：2026-01-20T13:30:00Z）
+模擬網路中斷（如：關閉路由器）
+等待 2.5 小時（跨越多個小時：13:30 → 16:00）
+- 斷線時間：13:30-16:00（共 2.5 小時 = 9000 秒）
+恢復網路連線
+等待 XMPP 重新連線成功
+記錄重新連線時間（T2，範例：2026-01-20T16:00:00Z）
+等待上報時機（如：17:00）
+檢查上報的 Payload：
+- 確認包含所有受影響的時段（13:00-14:00, 14:00-15:00, 15:00-16:00）
+- 確認每個時段的離線時長計算正確：
+- offline[13]（13:00-14:00）：30 分鐘 = 1800 秒
+- offline[14]（14:00-15:00）：60 分鐘 = 3600 秒
+- offline[15]（15:00-16:00）：60 分鐘 = 3600 秒
+- 驗證總離線時長：1800 + 3600 + 3600 = 9000 秒（正確）
+- 範例 Payload：
+`json
+{
+""start_time"": ""2026-01-20T13:00:00Z"",
+""end_time"": ""2026-01-20T17:00:00Z"",
+""offline"": [0,0,0,0,0,0,0,0,0,0,0,0,0,1800,3600,3600,0,0,0,0,0,0,0,0]
+}
+`","超長斷線時，離線時長正確累計到對應的時段
+上報的 Payload 包含所有受影響的時段
+每個時段的離線時長計算正確",P1,待測試,
+7.3,邊緣案例測試,跨日上報測試 ⭐ P1,驗證跨日時上報機制正常運作,"Embedded/SW Camera 裝置已啟動連線狀態監控
+Embedded/SW Camera 裝置已累計離線時長資料
+網路連線正常","在 23:30 啟動 Embedded/SW Camera 裝置，開始 Logger（設定 startTime = 2026-01-20T23:30:00Z）
+累計離線時長資料（23:30-24:00，對應 offline[23]）
+- 範例：在 23:35-23:40 斷線 5 分鐘，offline[23] = 300
+等待上報時機（開始 Logger + 1 hour = 00:30，且必須滿足整點）
+在 00:30 檢查是否嘗試上報
+- 預期：✅ 上傳前一天的 23:00~24:00 的資料
+檢查上報的 Payload：
+- start_time 為 app 啟動連上線的實際時間（如：2026-01-20T23:30:00Z，非整點，UTC 時間）
+- end_time 為當天的 2026-01-21T00:00:00Z（切齊整點，跨日）
+- offline array 包含對應時段的離線時長（offline[23] = 300）
+- 範例 Payload：
+`json
+{
+""start_time"": ""2026-01-20T23:30:00Z"",
+""end_time"": ""2026-01-21T00:00:00Z"",
+""offline"": [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,300]
+}
+`
+繼續累計當天的離線時長資料（00:00-01:00，對應 offline[0]）
+- 範例：在 00:10-00:15 斷線 5 分鐘，offline[0] = 300
+等待下次上報時機（01:30）
+在 01:30 檢查是否嘗試上報
+- 預期：✅ 上傳當天的 00:00~01:00 的資料
+檢查上報的 Payload：
+- start_time 為 app 啟動連上線的實際時間（如：2026-01-20T23:30:00Z，非整點，UTC 時間）
+- 註：如果 app 在 23:30 啟動，則 start_time 為 2026-01-20T23:30:00Z（非整點）
+- end_time 為當天的 2026-01-21T01:00:00Z
+- offline array 包含對應時段的離線時長（offline[0] = 300）
+- 範例 Payload：
+`json
+{
+""start_time"": ""2026-01-21T00:00:00Z"",
+""end_time"": ""2026-01-21T01:00:00Z"",
+""offline"": [300,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+}
+`
+驗證跨日後的資料正確記錄和上報：
+- 前一天的資料（23:00-24:00）正確上報
+- 當天的資料（00:00-01:00）正確上報
+- 日期轉換正確（UTC 時間）","跨日時上報機制正常運作
+上報的 Payload 日期正確（前一天的 23:00:00 至當天的 00:00:00）
+跨日後的資料正確記錄和上報",P1,待測試,
+8.1,裝置相容性測試,AC101 裝置測試 ⭐ P0,驗證 AC101 裝置上 Connection Report 功能正常運作,"AC101 裝置已安裝新版本韌體（1.20.0）
+AC101 裝置已配對並登入
+網路連線正常","確認 AC101 裝置正常運作
+啟動連線狀態監控
+驗證連線狀態監控正常運作
+累計離線時長資料
+等待上報時機
+驗證 API 上傳正常運作
+模擬 SD 卡錯誤
+驗證 SD 卡錯誤處理正常運作
+驗證即時影像功能正常
+驗證錄影功能正常
+驗證事件偵測功能正常","AC101 裝置上連線狀態監控正常
+AC101 裝置上 API 上傳正常
+AC101 裝置上 SD 卡錯誤處理正常",P0,待測試,
+8.2,裝置相容性測試,AC201 裝置測試 ⭐ P0,驗證 AC201 裝置上 Connection Report 功能正常運作,"AC201 裝置已安裝新版本韌體（1.20.0）
+AC201 裝置已配對並登入
+網路連線正常","確認 AC201 裝置正常運作
+啟動連線狀態監控
+驗證連線狀態監控正常運作
+累計離線時長資料
+等待上報時機
+驗證 API 上傳正常運作
+模擬 SD 卡錯誤
+驗證 SD 卡錯誤處理正常運作
+驗證即時影像功能正常
+驗證錄影功能正常
+驗證事件偵測功能正常","AC201 裝置上連線狀態監控正常
+AC201 裝置上 API 上傳正常
+AC201 裝置上 SD 卡錯誤處理正常",P0,待測試,
+8.3,裝置相容性測試,AC202 裝置測試 ⭐ P0,驗證 AC202 裝置上 Connection Report 功能正常運作,"AC202 裝置已安裝新版本韌體（1.20.0）
+AC202 裝置已配對並登入
+網路連線正常","確認 AC202 裝置正常運作
+啟動連線狀態監控
+驗證連線狀態監控正常運作
+累計離線時長資料
+等待上報時機
+驗證 API 上傳正常運作
+模擬 SD 卡錯誤
+驗證 SD 卡錯誤處理正常運作
+驗證即時影像功能正常
+驗證錄影功能正常
+驗證事件偵測功能正常","AC202 裝置上連線狀態監控正常
+AC202 裝置上 API 上傳正常
+AC202 裝置上 SD 卡錯誤處理正常",P0,待測試,
+9.1,整合測試,HW Camera 數據清空測試 - Reboot ⭐ P0,驗證 HW Camera 在 Reboot（重開機）後，connection offline 資料被清空,"HW Camera 裝置（AC101/AC201/AC202）已配對並登入
+HW Camera 裝置已啟動連線狀態監控
+HW Camera 裝置已累計離線時長資料（Cache 中有資料）
+網路連線正常","確認 HW Camera 裝置正常運作
+啟動連線狀態監控
+累計離線時長資料：
+- 在 13:30-13:35 模擬斷線 5 分鐘（300 秒）
+- 確認離線時長記錄在 Cache 中（如：{start_time: ""2026-01-20T13:35:00Z"", offline: [0,0,0,0,0,0,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0]}）
+確認 Cache 中有資料（未上報）
+執行 Reboot（重開機）：
+- 方法 1：透過系統設定執行重開機
+- 方法 2：透過硬體按鈕執行重開機
+- 方法 3：透過 API 或遠端控制執行重開機
+等待 HW Camera 裝置重開機完成並重新連線
+檢查 Cache 是否已清空：
+- 確認 Cache 中無 connection offline 資料
+- 確認 Cache 為空或重置為初始狀態
+重新啟動連線狀態監控
+驗證重新開始累計離線時長資料（從重開機後的時間開始）","Reboot 後，connection offline 資料被清空
+Cache 中無之前的離線時長資料
+重新開始累計離線時長資料",P0,待測試,
+9.2,整合測試,HW Camera 數據清空測試 - 登出 ⭐ P0,驗證 HW Camera 在登出後，connection offline 資料被清空,"HW Camera 裝置（AC101/AC201/AC202）已配對並登入
+HW Camera 裝置已啟動連線狀態監控
+HW Camera 裝置已累計離線時長資料（Cache 中有資料）
+網路連線正常","確認 HW Camera 裝置正常運作
+啟動連線狀態監控
+累計離線時長資料：
+- 在 13:30-13:35 模擬斷線 5 分鐘（300 秒）
+- 確認離線時長記錄在 Cache 中（如：{start_time: ""2026-01-20T13:35:00Z"", offline: [0,0,0,0,0,0,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0]}）
+確認 Cache 中有資料（未上報）
+執行登出操作：
+- 方法 1：透過 Viewer 端 App 執行登出
+- 方法 2：透過系統設定執行登出
+- 方法 3：透過 API 執行登出
+等待登出完成
+檢查 Cache 是否已清空：
+- 確認 Cache 中無 connection offline 資料
+- 確認 Cache 為空或重置為初始狀態
+重新登入並啟動連線狀態監控
+驗證重新開始累計離線時長資料（從登入後的時間開始）","登出後，connection offline 資料被清空
+Cache 中無之前的離線時長資料
+重新登入後，重新開始累計離線時長資料",P0,待測試,
+9.3,整合測試,HW Camera 數據清空測試 - Crash ⭐ P0,驗證 HW Camera 在 Crash（崩潰）後重開機，connection offline 資料被清空,"HW Camera 裝置（AC101/AC201/AC202）已配對並登入
+HW Camera 裝置已啟動連線狀態監控
+HW Camera 裝置已累計離線時長資料（Cache 中有資料）
+網路連線正常
+可模擬 Crash 情境","確認 HW Camera 裝置正常運作
+啟動連線狀態監控
+累計離線時長資料：
+- 在 13:30-13:35 模擬斷線 5 分鐘（300 秒）
+- 確認離線時長記錄在 Cache 中（如：{start_time: ""2026-01-20T13:35:00Z"", offline: [0,0,0,0,0,0,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0]}）
+確認 Cache 中有資料（未上報）
+模擬 Crash 情境：
+- 方法 1：強制終止 App 進程（如：kill -9）
+- 方法 2：模擬記憶體不足導致崩潰
+- 方法 3：模擬系統異常導致崩潰
+確認 HW Camera 裝置已崩潰（無回應或自動重開機）
+等待 HW Camera 裝置自動重開機完成並重新連線（或手動重開機）
+檢查 Cache 是否已清空：
+- 確認 Cache 中無 connection offline 資料
+- 確認 Cache 為空或重置為初始狀態
+重新啟動連線狀態監控
+驗證重新開始累計離線時長資料（從重開機後的時間開始）","Crash 後重開機，connection offline 資料被清空
+Cache 中無之前的離線時長資料
+重新開始累計離線時長資料",P0,待測試,
+9.4,整合測試,HW Camera 數據清空測試 - 更新版本 Reboot ⭐ P0,驗證 HW Camera 在更新版本後 Reboot，connection offline 資料被清空,"HW Camera 裝置（AC101/AC201/AC202）已配對並登入
+HW Camera 裝置已啟動連線狀態監控
+HW Camera 裝置已累計離線時長資料（Cache 中有資料）
+網路連線正常
+有新版本韌體可供更新","確認 HW Camera 裝置正常運作（當前版本，如：1.19.0）
+啟動連線狀態監控
+累計離線時長資料：
+- 在 13:30-13:35 模擬斷線 5 分鐘（300 秒）
+- 確認離線時長記錄在 Cache 中（如：{start_time: ""2026-01-20T13:35:00Z"", offline: [0,0,0,0,0,0,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0]}）
+確認 Cache 中有資料（未上報）
+執行韌體更新：
+- 方法 1：透過 Viewer 端 App 執行 OTA 更新
+- 方法 2：透過系統設定執行韌體更新
+- 方法 3：透過 API 執行韌體更新
+等待韌體更新完成
+確認 HW Camera 裝置自動 Reboot（重開機）
+等待 HW Camera 裝置重開機完成並重新連線
+確認韌體版本已更新（如：1.20.0）
+檢查 Cache 是否已清空：
+- 確認 Cache 中無 connection offline 資料
+- 確認 Cache 為空或重置為初始狀態
+重新啟動連線狀態監控
+驗證重新開始累計離線時長資料（從重開機後的時間開始）","更新版本後 Reboot，connection offline 資料被清空
+Cache 中無之前的離線時長資料
+重新開始累計離線時長資料",P0,待測試,
+9.5,整合測試,HW Camera 數據清空測試 - Reset 重新配對 ⭐ P0,驗證 HW Camera 在 Reset 重新配對後，connection offline 資料被清空,"HW Camera 裝置（AC101/AC201/AC202）已配對並登入
+HW Camera 裝置已啟動連線狀態監控
+HW Camera 裝置已累計離線時長資料（Cache 中有資料）
+網路連線正常","確認 HW Camera 裝置正常運作
+啟動連線狀態監控
+累計離線時長資料：
+- 在 13:30-13:35 模擬斷線 5 分鐘（300 秒）
+- 確認離線時長記錄在 Cache 中（如：{start_time: ""2026-01-20T13:35:00Z"", offline: [0,0,0,0,0,0,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0]}）
+確認 Cache 中有資料（未上報）
+執行 Reset 操作：
+- 方法 1：透過硬體 Reset 按鈕執行重置
+- 方法 2：透過系統設定執行重置
+- 方法 3：透過 API 執行重置
+等待 Reset 完成（裝置會自動重開機）
+等待 HW Camera 裝置重開機完成
+執行重新配對操作：
+- 透過 Viewer 端 App 重新配對 HW Camera 裝置
+- 確認配對成功
+檢查 Cache 是否已清空：
+- 確認 Cache 中無 connection offline 資料
+- 確認 Cache 為空或重置為初始狀態
+重新啟動連線狀態監控
+驗證重新開始累計離線時長資料（從重新配對後的時間開始）","Reset 重新配對後，connection offline 資料被清空
+Cache 中無之前的離線時長資料
+重新開始累計離線時長資料",P0,待測試,
+10.1,整合測試 (Integration Tests),端到端測試 - 完整流程 ⭐ P0,驗證從 Embedded/SW Camera 端上報到 Viewer 端顯示的完整流程,"Embedded/SW Camera 裝置已配對
+Viewer 端設備（iOS/Android）已安裝新版本 App
+網路連線正常
+API 服務正常運作","確認 Embedded/SW Camera 裝置正常運作
+啟動連線狀態監控
+累計離線時長資料：
+- 在 13:30-13:35 模擬斷線 5 分鐘（300 秒）
+- 確認離線時長記錄在 offline[13] = 300
+等待上報時機（開始 Logger + 1 hour，且必須滿足整點，如：14:00）
+驗證 Embedded/SW Camera 端上報成功：
+- 確認 API 端點為 POST /device/v1/stats
+- 確認 Payload：
+- start_time: app 啟動連上線的實際時間（如：2026-01-20T13:35:00Z，非整點，UTC 時間）
+- end_time: 切齊整點的時間（如：2026-01-20T14:00:00Z，UTC 時間）
+- offline: [0,0,0,0,0,0,0,0,0,0,0,0,0,300,0,0,0,0,0,0,0,0,0,0]
+- 確認 Status Code 為 201
+在 Viewer 端開啟 Connection Report 頁面
+驗證 Viewer 端正確顯示資料：
+- 確認 Viewer 端呼叫 GET /device/v1/stats/:jid API
+- 確認 Response 包含 offline_stats array
+- 確認 13:00-14:00 時段顯示離線時長 300 秒
+驗證資料一致性（Embedded/SW Camera 端上報的資料與 Viewer 端顯示的資料一致）：
+- Embedded/SW Camera 端上報：offline[13] = 300
+- Viewer 端顯示：13:00-14:00 時段離線時長 = 300 秒
+驗證時間軸顯示正確：
+- 確認時間軸顯示 24 小時（0-23）
+- 確認時區轉換正確（UTC → 使用者時區）
+驗證 Timeline slot 顏色標示正確：
+- null：該時段無資料，呈現灰色
+- 0~5 秒：該時段正常，呈現綠色
+- 6~1440 秒：該時段有 offline 秒數介於 6~1440（24 分鐘），呈現黃色
+- 1441 秒以上：該時段有 offline 秒數 >= 1441 秒，呈現紅色
+- 範例：300 秒離線應顯示為黃色（300 秒介於 6~1440 秒範圍）","完整流程正常運作
+Embedded/SW Camera 端上報成功
+Viewer 端正確顯示資料
+資料一致性正確",P0,待測試,
+10.2,整合測試 (Integration Tests),多台裝置同時上報測試 ⭐ P1,驗證多台 Embedded/SW Camera 裝置同時上報時，API 和系統穩定,"多台 Embedded/SW Camera 裝置（至少 3 台）已配對
+所有 Embedded/SW Camera 裝置已啟動連線狀態監控
+所有 Embedded/SW Camera 裝置已累計離線時長資料
+網路連線正常","確認所有 Embedded/SW Camera 裝置正常運作（至少 3 台：AC101、AC201、AC202）
+同步所有 Embedded/SW Camera 裝置的上報時機（如：都在整點時上報，14:00）
+為每台裝置設定不同的離線時長資料：
+- 裝置 1（AC101）：offline[13] = 300 秒
+- 裝置 2（AC201）：offline[13] = 600 秒
+- 裝置 3（AC202）：offline[13] = 900 秒
+等待上報時機（14:00）
+觀察所有 Embedded/SW Camera 裝置是否同時執行上報
+使用網路封包監控工具監控 API 請求：
+- 確認同時收到 3 個 POST /device/v1/stats 請求
+- 確認每個請求的 Payload 正確
+確認 API 正常處理多台裝置同時上報：
+- 確認所有請求的 Status Code 為 201
+- 確認 API 回應時間正常（< 1 秒）
+檢查系統穩定性（無崩潰或異常）：
+- 確認 Embedded/SW Camera 裝置無崩潰
+- 確認 API 服務無異常
+檢查每台裝置的上報是否成功：
+- 裝置 1：Status Code 201，Payload 包含 offline[13] = 300
+- 裝置 2：Status Code 201，Payload 包含 offline[13] = 600
+- 裝置 3：Status Code 201，Payload 包含 offline[13] = 900
+驗證每台裝置的資料是否正確上報：
+- 確認資料未混淆（每台裝置的資料獨立）
+- 確認資料完整性（24 小時資料完整）","API 正常處理多台裝置同時上報
+系統穩定，無崩潰或異常
+每台裝置的上報成功",P1,待測試,
+10.3,整合測試 (Integration Tests),Embedded/SW Camera 端 Camera Capability 發送測試 ⭐ P0,驗證 Embedded/SW Camera 端正確發送 Camera Capability camera_health: 2,"Embedded/SW Camera 裝置（AC101/AC201/AC202）已安裝新版本韌體（1.20.0）
+Embedded/SW Camera 裝置已配對並登入
+Viewer 端設備（iOS/Android）已安裝新版本 App
+網路連線正常","確認 Embedded/SW Camera 裝置正常運作
+確認 Embedded/SW Camera 裝置已配對並連線
+使用網路封包監控工具（如：Wireshark、mitmproxy）監控 XMPP 或 API 通訊
+檢查 Embedded/SW Camera 端發送的 Camera Capability：
+- 確認包含 camera_health 欄位
+- 確認 camera_health 值為 2（新版）
+驗證 Camera Capability 發送時機：
+- 確認在配對時發送
+- 確認在連線建立時發送
+驗證 Camera Capability 格式正確：
+- 確認格式符合規格（如：JSON 格式或 XMPP capability 格式）","Embedded/SW Camera 端正確發送 Camera Capability camera_health: 2
+Camera Capability 發送時機正確
+Camera Capability 格式正確",P0,待測試,
+10.4,整合測試 (Integration Tests),Viewer 端 Camera Capability 判斷測試 - 舊版 Camera (camera_health = 1) ⭐ P0,驗證 Viewer 端正確判斷舊版 Camera（camera_health = 1）並顯示舊版 WebView 頁面,"舊版 Embedded/SW Camera 裝置（camera_health = 1）已配對
+Viewer 端設備（iOS/Android）已安裝新版本 App
+網路連線正常","確認舊版 Embedded/SW Camera 裝置正常運作（camera_health = 1）
+在 Viewer 端開啟 Connection Report 頁面
+檢查 Viewer 端是否正確讀取 Camera Capability：
+- 確認 Viewer 端取得 camera_health = 1
+驗證 Viewer 端顯示方式：
+- 確認 Viewer 端開啟舊版 WebView 頁面（stats/offline.html）
+- 確認未開啟新版離線報告 UI
+驗證舊版 WebView 頁面正常運作：
+- 確認頁面正常載入
+- 確認離線資訊正常顯示","Viewer 端正確判斷舊版 Camera（camera_health = 1）
+Viewer 端開啟舊版 WebView 頁面（stats/offline.html）
+舊版 WebView 頁面正常運作",P0,待測試,
+10.5,整合測試 (Integration Tests),Viewer 端 Camera Capability 判斷測試 - 新版 Camera (camera_health = 2) ⭐ P0,驗證 Viewer 端正確判斷新版 Camera（camera_health = 2）並開啟新版離線報告 UI,"新版 Embedded/SW Camera 裝置（camera_health = 2）已配對
+Viewer 端設備（iOS/Android）已安裝新版本 App
+網路連線正常
+Embedded/SW Camera 端已有上報的離線統計資料","確認新版 Embedded/SW Camera 裝置正常運作（camera_health = 2）
+確認 Embedded/SW Camera 端已上報離線統計資料
+在 Viewer 端開啟 Connection Report 頁面
+檢查 Viewer 端是否正確讀取 Camera Capability：
+- 確認 Viewer 端取得 camera_health = 2
+驗證 Viewer 端顯示方式：
+- 確認 Viewer 端開啟新版離線報告 UI（Native UI）
+- 確認未開啟舊版 WebView 頁面
+驗證新版離線報告 UI 正常運作：
+- 確認頁面正常載入
+- 確認離線資訊正常顯示
+- 確認時間軸顯示正確
+- 確認 Timeline slot 顏色標示正確","Viewer 端正確判斷新版 Camera（camera_health = 2）
+Viewer 端開啟新版離線報告 UI（Native UI）
+新版離線報告 UI 正常運作",P0,待測試,
+10.6,整合測試 (Integration Tests),Viewer 端 Camera Capability 預設行為測試 ⭐ P1,驗證 Viewer 端無法取得 Camera Capability camera_health 值時，預設行為當作 camera_health = 2,"Embedded/SW Camera 裝置已配對（但無法取得 camera_health 值）
+Viewer 端設備（iOS/Android）已安裝新版本 App
+網路連線正常","確認 Embedded/SW Camera 裝置正常運作
+模擬無法取得 Camera Capability camera_health 值的情況：
+- 方法 1：模擬 XMPP 連線異常，導致無法取得 capability
+- 方法 2：模擬 API 回應中缺少 camera_health 欄位
+- 方法 3：模擬 camera_health 值為 null 或 undefined
+在 Viewer 端開啟 Connection Report 頁面
+檢查 Viewer 端預設行為：
+- 確認 Viewer 端將 camera_health 預設為 2（新版）
+- 確認 Viewer 端開啟新版離線報告 UI（Native UI）
+- 確認未開啟舊版 WebView 頁面
+驗證新版離線報告 UI 正常運作：
+- 確認頁面正常載入
+- 確認功能正常運作（即使無法取得 camera_health 值）","Viewer 端無法取得 camera_health 值時，預設行為當作 camera_health = 2
+Viewer 端開啟新版離線報告 UI（Native UI）
+新版離線報告 UI 正常運作",P1,待測試,
+10.7,整合測試 (Integration Tests),Viewer 端 Amplitude 事件測試 - 從 camera_settings 入口 ⭐ P1,驗證 Viewer 端從 camera_settings 入口點擊 Connection Report 時，正確上傳 Amplitude 事件,"Embedded/SW Camera 裝置已配對
+Viewer 端設備（iOS/Android）已安裝新版本 App
+網路連線正常
+Amplitude Analytics 服務正常運作
+可監控 Amplitude 事件（如：使用 Amplitude Dashboard 或 API）","確認 Embedded/SW Camera 裝置正常運作
+確認 Viewer 端 App 已登入並連線到 Camera 裝置
+開啟 Amplitude 事件監控工具（如：Amplitude Dashboard、API 監控、或開發者工具）
+在 Viewer 端 App 中，從 camera_settings 入口點擊 Connection Report：
+- 進入 Camera Settings 頁面，點擊 Connection Stability 選項
+確認 Connection Report 頁面正常開啟
+檢查 Amplitude 事件是否正確上傳：
+- 確認事件名稱（Event Name）為 ""pageview: connection stability""
+- 確認事件屬性（Event Properties）包含：
+- Key: ""from""
+- Value: ""camera_settings""
+驗證事件上傳時機：
+- 確認事件在點擊入口時立即上傳（而非頁面載入完成後）
+- 確認事件只上傳一次（不重複上傳）
+驗證事件格式正確：
+- 確認事件名稱格式正確（無拼寫錯誤）
+- 確認事件屬性 key 和 value 格式正確
+- 確認事件包含必要的使用者識別資訊（如：User ID、Device ID）","從 camera_settings 入口點擊 Connection Report 時，正確上傳 Amplitude 事件
+事件名稱：""pageview: connection stability""
+事件屬性：{""from"": ""camera_settings""}
+事件上傳時機正確（點擊時立即上傳）",P1,待測試,
+10.8,整合測試 (Integration Tests),Viewer 端 Amplitude 事件測試 - 從 camera_health 入口 ⭐ P1,驗證 Viewer 端從 camera_health 入口點擊 Connection Report 時，正確上傳 Amplitude 事件,"Camera 裝置已配對
+Viewer 端設備（iOS/Android）已安裝新版本 App
+網路連線正常
+Amplitude Analytics 服務正常運作
+可監控 Amplitude 事件（如：使用 Amplitude Dashboard 或 API）","確認 Camera 裝置正常運作
+確認 Viewer 端 App 已登入並連線到 Camera 裝置
+開啟 Amplitude 事件監控工具（如：Amplitude Dashboard、API 監控、或開發者工具）
+在 Viewer 端 App 中，從 camera_health 入口點擊 Connection Report：
+- 從 Camera List 點擊 Check 進入 Camera Health 頁面，點擊 Connection Stability 選項
+確認 Connection Report 頁面正常開啟
+檢查 Amplitude 事件是否正確上傳：
+- 確認事件名稱（Event Name）為 ""pageview: connection stability""
+- 確認事件屬性（Event Properties）包含：
+- Key: ""from""
+- Value: ""camera_health""
+驗證事件上傳時機：
+- 確認事件在點擊入口時立即上傳（而非頁面載入完成後）
+- 確認事件只上傳一次（不重複上傳）
+驗證事件格式正確：
+- 確認事件名稱格式正確（無拼寫錯誤）
+- 確認事件屬性 key 和 value 格式正確
+- 確認事件包含必要的使用者識別資訊（如：User ID、Device ID）
+驗證兩個入口的事件屬性不同：
+- 從 camera_settings 入口：{""from"": ""camera_settings""}
+- 從 camera_health 入口：{""from"": ""camera_health""}","從 camera_health 入口點擊 Connection Report 時，正確上傳 Amplitude 事件
+事件名稱：""pageview: connection stability""
+事件屬性：{""from"": ""camera_health""}
+事件上傳時機正確（點擊時立即上傳）
+兩個入口的事件屬性正確區分",P1,待測試,
+10.9,整合測試 (Integration Tests),Viewer 端 Connection Stability 頁面 UI 測試 ⭐ P0,驗證 Viewer 端 Connection Stability 頁面 UI 符合 Figma 設計規格,"Camera 裝置已配對
+Viewer 端設備（iOS/Android）已安裝新版本 App
+網路連線正常
+API 服務正常運作
+Embedded/SW Camera 端已有上報的離線統計資料
+可參考 Figma 設計：Connection Stability UI","確認 Camera 裝置正常運作
+確認 Embedded/SW Camera 端已有上報的離線統計資料
+在 Viewer 端開啟 Connection Stability 頁面（從 camera_settings 或 camera_health 入口）
+驗證 Header Section（頁面頂部）：
+- 確認左側有 Back Arrow（返回按鈕）
+- 確認中間顯示頁面標題 ""Connection Stability""（粗體、置中）
+- 確認右側有 Help Icon（問號圖示，圓形背景）
+- 驗證點擊 Back Arrow 可返回上一頁
+- 驗證點擊 Help Icon 可開啟說明或幫助頁面
+驗證 Date Selection Section（日期選擇區）：
+- 確認顯示當前日期（格式：YYYY/MM/DD (Today)，如：2025/12/10 (Today)）
+- 確認日期下方顯示提示文字：""Select dates from the past 7 days to view.""
+- 確認右側有 Settings Icon（齒輪圖示）
+- 驗證點擊日期可開啟日期選擇器
+- 驗證日期選擇器僅允許選擇過去 7 天的日期
+- 驗證點擊 Settings Icon 可開啟設定頁面
+驗證 24-Hour Connection Status Chart Section（24 小時連線狀態圖表區）：
+- 確認區塊標題顯示 ""24-HOUR CONNECTION STATUS""（橘色、大寫）
+- 確認顯示橫向長條圖（24 個時段，對應 0-23 小時）
+- 驗證時間標籤顯示正確：
+- 確認顯示 ""00:00""、""06:00""、""12:00""、""18:00"" 標籤
+- 確認標籤下方有虛線對齊
+- 驗證顏色標示正確：
+- null：該時段無資料，呈現灰色（Gray）
+- 0~5 秒：該時段正常，呈現綠色（Green），表示 ""Stable""（穩定連線）
+- 6~1440 秒：該時段有 offline 秒數介於 6~1440（24 分鐘），呈現黃色（Orange），表示 ""Weak""（弱連線）
+- 1441 秒以上：該時段有 offline 秒數 >= 1441 秒，呈現紅色（Red），表示 ""Disconnected""（斷線）
+- 驗證圖例（Legend）顯示正確：
+- 確認圖例位於圖表下方
+- 確認包含四個顏色方塊和對應文字：
+- 綠色方塊 + ""Stable""
+- 橘色方塊 + ""Weak""
+- 紅色方塊 + ""Disconnected""
+- 灰色方塊 + ""No Data""
+- 驗證圖表互動功能：
+- 確認點擊圖表時段可顯示詳細資訊（如：離線時長、時間範圍）
+- 確認圖表可正確顯示 24 小時資料
+驗證 Offline Events & Diagnosis Section（離線事件與診斷區）：
+- 確認區塊標題顯示 ""Offline events & diagnosis:""
+- 確認顯示診斷原因列表（項目符號列表）：
+- ""Unstable Wi-Fi signal""（不穩定的 Wi-Fi 訊號）
+- ""Issues with your internet service provider""（網路服務提供者問題）
+- ""The app was moved to the background""（App 移至背景）
+- ""Connected to a VPN""（連接到 VPN）
+- ""Battery optimization is limiting the app""（電池優化限制 App）
+- ""Low battery issues""（低電量問題）
+- ""Device overheating""（裝置過熱）
+- 驗證列表格式正確（項目符號、文字對齊、間距）
+驗證整體 UI 布局：
+- 確認各區塊間距適當
+- 確認文字大小和字體符合設計規格
+- 確認顏色使用符合設計規格
+- 確認在不同螢幕尺寸（手機、平板）上顯示正常
+- 確認在深色模式和淺色模式下顯示正常
+驗證資料顯示正確性：
+- 確認圖表顯示的資料與 API 回應的資料一致
+- 確認顏色標示與實際離線時長對應正確
+- 確認時間標籤與時區轉換正確
+驗證響應式設計：
+- 確認橫向和縱向顯示都正常
+- 確認在不同裝置尺寸上布局正確
+- 確認文字不會被截斷或重疊","Connection Stability 頁面 UI 完全符合 Figma 設計規格
+所有 UI 元素（Header、Date Selection、Chart、Legend、Diagnosis）都正確顯示
+顏色標示正確（Green/Orange/Red/Gray 對應正確的連線狀態）
+圖表互動功能正常
+診斷原因列表完整顯示
+響應式設計正常運作",P0,待測試,
+10.10,整合測試 (Integration Tests),Viewer 端 Firebase ScreenName 事件測試 ⭐ P1,驗證 Viewer 端開啟 Connection Stability 頁面時，正確上傳 Firebase ScreenName 事件,"Camera 裝置已配對
+Viewer 端設備（iOS/Android）已安裝新版本 App
+網路連線正常
+Firebase Analytics 服務正常運作
+可監控 Firebase 事件（如：使用 Firebase Console、DebugView、或開發者工具）","確認 Camera 裝置正常運作
+確認 Viewer 端 App 已登入並連線到 Camera 裝置
+開啟 Firebase 事件監控工具（如：Firebase Console、DebugView、或開發者工具）
+在 Viewer 端 App 中，開啟 Connection Stability 頁面：
+- 方法 1：從 camera_settings 入口點擊 Connection Stability
+- 方法 2：從 camera_health 入口點擊 Connection Stability
+確認 Connection Stability 頁面正常開啟
+檢查 Firebase ScreenName 事件是否正確上傳：
+- 確認事件名稱（Event Name）為 ""ScreenName""
+- 確認事件參數（Event Parameters）包含：
+- Screen Name 值為 ""4.6.2 Connection Stability""
+驗證事件上傳時機：
+- 確認事件在頁面載入時立即上傳（而非點擊入口時）
+- 確認事件只上傳一次（不重複上傳）
+驗證事件格式正確：
+- 確認事件名稱格式正確（ScreenName）
+- 確認 Screen Name 值格式正確（""4.6.2 Connection Stability""）
+- 確認事件包含必要的使用者識別資訊（如：User ID、Device ID）
+驗證舊版事件已更新：
+- 確認不再使用舊的 ScreenName ""4.6.2 Offline Statistics""
+- 確認新版本使用 ScreenName ""4.6.2 Connection Stability""
+- 驗證舊版 App 和新版 App 的 ScreenName 事件不同（如果可測試）
+驗證不同入口的事件一致：
+- 從 camera_settings 入口：ScreenName 為 ""4.6.2 Connection Stability""
+- 從 camera_health 入口：ScreenName 為 ""4.6.2 Connection Stability""
+- 確認兩個入口的 ScreenName 事件相同","開啟 Connection Stability 頁面時，正確上傳 Firebase ScreenName 事件
+事件名稱：""ScreenName""
+Screen Name 值：""4.6.2 Connection Stability""
+事件上傳時機正確（頁面載入時立即上傳）
+舊版事件 ""4.6.2 Offline Statistics"" 已更新為 ""4.6.2 Connection Stability""
+不同入口的 ScreenName 事件一致",P1,待測試,

@@ -1,0 +1,30 @@
+{
+  "rules": [
+    {
+      "name": "event_play from event list",
+      "event_name": "event_play",
+      "type": "firebase",
+      "attributes": {
+        "entry": "event list",
+        "event_source": "cloud"
+      },
+      "attributes_contains": {
+        "event_id": true,
+        "event_tags": true
+      },
+      "match_once": true
+    },
+    {
+      "name": "event_play experience v2",
+      "event_name": "event_play_experience_v2",
+      "type": "firebase",
+      "match_once": true
+    },
+    {
+      "name": "any firebase event_play (regex)",
+      "event_name_regex": "event_play.*",
+      "type": "firebase",
+      "match_once": true
+    }
+  ]
+}

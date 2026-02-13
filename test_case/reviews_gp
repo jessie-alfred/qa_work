@@ -1,0 +1,4490 @@
+[
+  {
+    "reviews": [
+      {
+        "reviewId": "cc19a56c-efb4-4ff3-b57f-b4f2cbee62c6",
+        "authorName": "Bojes",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tsangat bagus",
+              "lastModified": {
+                "seconds": "1768200784",
+                "nanos": 811000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "id",
+              "device": "OP4F2F",
+              "androidOsVersion": 29,
+              "deviceMetadata": {
+                "productName": "OP4F2F (CPH2239)",
+                "manufacturer": "Oppo",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 3802
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "be9181d5-d29f-4321-a567-f5c2c9820d40",
+        "authorName": "Özkan Gülerer",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\t👍👍👍👍👍👍👍👍👍",
+              "lastModified": {
+                "seconds": "1768199235",
+                "nanos": 947000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "tr",
+              "device": "V2205",
+              "androidOsVersion": 34,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "V2205 (Y35)",
+                "manufacturer": "Vivo",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2408,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 7651
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "62143c9b-3de5-48c6-bc3e-afefa57ba327",
+        "authorName": "Nicolas Collantes",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tExelente",
+              "lastModified": {
+                "seconds": "1768197987",
+                "nanos": 231000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "a54x",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a54x (Galaxy A54 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 7437
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "174dfdb0-5cbe-4cca-8c52-aa1f676b4d96",
+        "authorName": "Faris Husain",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tجميل",
+              "lastModified": {
+                "seconds": "1768197303",
+                "nanos": 200000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "ar",
+              "device": "e3q",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "e3q (Galaxy S24 Ultra)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1440,
+                "screenHeightPx": 3120,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 11085
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "ed4afbe3-518e-4df1-b9b5-b39ec3642ea9",
+        "authorName": "Christopher Shadrick",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tlove it",
+              "lastModified": {
+                "seconds": "1768191300",
+                "nanos": 753000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "SouthernDunes",
+              "androidOsVersion": 34,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "SouthernDunes (TMRV06P5G)",
+                "manufacturer": "T-Mobile",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1640,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 280,
+                "glEsVersion": 196610,
+                "ramMb": 5677
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "8a12c8e5-2e09-4843-b3c2-977a01e9a39e",
+        "authorName": "Maricarmen Guadarrama",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\t😃",
+              "lastModified": {
+                "seconds": "1768190674",
+                "nanos": 903000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "S10_V_EEA",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "S10_V_EEA (S10_V_EEA)",
+                "manufacturer": "SUAAT",
+                "deviceClass": "FORM_FACTOR_TABLET",
+                "screenWidthPx": 800,
+                "screenHeightPx": 1280,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 213,
+                "glEsVersion": 196610,
+                "ramMb": 7573
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "70907df9-77c1-4d9c-a0a9-96a8ddc62c3d",
+        "authorName": "gopalam subbarao",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tgood",
+              "lastModified": {
+                "seconds": "1768186605",
+                "nanos": 313000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "e3q",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "e3q (Galaxy S24 Ultra)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1440,
+                "screenHeightPx": 3120,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 11085
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "97015e92-4afc-41eb-af1b-d34fb7a2e07e",
+        "authorName": "manuel Cediel morcote",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tmuy buena",
+              "lastModified": {
+                "seconds": "1768183810",
+                "nanos": 360000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "Infinix-X6851B",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "Infinix-X6851B (NOTE 40 Pro+ 5G)",
+                "manufacturer": "Infinix",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2436,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 11557
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "b6b79c0d-e20a-4fff-be5c-6c750015fe78",
+        "authorName": "Jean Pierre Masheka Namegabe",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tparfait",
+              "lastModified": {
+                "seconds": "1768173641",
+                "nanos": 507000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "fr",
+              "androidOsVersion": 27,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0"
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "7b18fb4f-783b-4968-9a6e-10a19ca3b24a",
+        "authorName": "Abdulrahmanadam Ali",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tعبدالرحمن",
+              "lastModified": {
+                "seconds": "1768171838",
+                "nanos": 820000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "ar",
+              "device": "a16",
+              "androidOsVersion": 36,
+              "deviceMetadata": {
+                "productName": "a16 (Galaxy A16)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 3621
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "c8137c8e-9039-45dc-8145-0850a2c1510b",
+        "authorName": "Juan Olivera",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tmuy bueno rápido de instalar exelente lo recomiendo",
+              "lastModified": {
+                "seconds": "1768167902",
+                "nanos": 725000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "atmos",
+              "androidOsVersion": 34,
+              "deviceMetadata": {
+                "productName": "atmos (Redmi 13C 5G)",
+                "manufacturer": "Redmi",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 3587
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "78f9408a-6671-4f47-92e2-4f5a2bccae80",
+        "authorName": "SIN WOO LEE",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\t여행때쓰려고요ㅠ좋아요",
+              "lastModified": {
+                "seconds": "1768167678",
+                "nanos": 461000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "ko",
+              "device": "pa3q",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "pa3q (Galaxy S25 Ultra)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1440,
+                "screenHeightPx": 3120,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 11114
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "ad2a5107-444d-4a73-904c-f6824e101ef8",
+        "authorName": "connie hogge",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tjust minutes into it so far so good 💯",
+              "lastModified": {
+                "seconds": "1768167148",
+                "nanos": 78000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "austin",
+              "androidOsVersion": 33,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "austin (moto g 5G (2022))",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 280,
+                "glEsVersion": 196610,
+                "ramMb": 3660
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "9e4ba614-a5ea-463e-826d-37318d8915de",
+        "authorName": "Somkid Kijch",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tใช้ดีมาก ใช้ง่าย ภาพคมชัด",
+              "lastModified": {
+                "seconds": "1768163937",
+                "nanos": 91000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "th",
+              "device": "a56x",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a56x (Galaxy A56 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 7420
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "9da52ab2-3625-4704-b1c1-14e5b3a3e5a6",
+        "authorName": "Geilson Silva",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tmuito bom parabéns 👏👏👏",
+              "lastModified": {
+                "seconds": "1768162940",
+                "nanos": 715000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "pt",
+              "device": "cancun",
+              "androidOsVersion": 34,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "cancun (moto g14)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 400,
+                "glEsVersion": 196610,
+                "ramMb": 3814
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "34dc737d-1206-4dd8-a97d-a484a7a7a085",
+        "authorName": "gaston kbrera",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tbuena y facil de instalar",
+              "lastModified": {
+                "seconds": "1768162221",
+                "nanos": 158000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "a14",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a14 (Galaxy A14)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2408,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 3683
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "7b6694ce-b6d5-4666-b141-dc029f89f42e",
+        "authorName": "Wwestie Ge 00",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tOne of the best app I have ever interacted with",
+              "lastModified": {
+                "seconds": "1768150230",
+                "nanos": 36000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "androidOsVersion": 29,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0"
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "2060f83f-f8f5-4bae-984a-8d28278480df",
+        "authorName": "Marife Ukaji",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tGood",
+              "lastModified": {
+                "seconds": "1768150142",
+                "nanos": 606000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "panther",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "panther (Pixel 7)",
+                "manufacturer": "Google",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 420,
+                "glEsVersion": 196610,
+                "ramMb": 7464
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "81475812-9049-4b22-a1bd-06fedcc531b4",
+        "authorName": "Mike Lawrence",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tJust got started with Alfred! Working great so far!",
+              "lastModified": {
+                "seconds": "1768146408",
+                "nanos": 329000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "rtwo",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "rtwo (motorola edge plus 2023)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 400,
+                "glEsVersion": 196610,
+                "ramMb": 7304
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "9f5a5569-8fdd-4774-9e45-8aeda9662b0c",
+        "authorName": "Irfan Khan",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tgood",
+              "lastModified": {
+                "seconds": "1768138664",
+                "nanos": 927000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "V2502",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "V2502 (vivo T4 5G )",
+                "manufacturer": "Vivo",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2392,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 7401
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "4aca7177-f69b-409c-98a0-57c209c77bfe",
+        "authorName": "Dorian Melo",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tfunciona de maravillas",
+              "lastModified": {
+                "seconds": "1768134662",
+                "nanos": 757000000
+              },
+              "starRating": 4,
+              "reviewerLanguage": "es",
+              "device": "merlin",
+              "androidOsVersion": 30,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "merlin (Redmi Note 9)",
+                "manufacturer": "Redmi",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 3701
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "df7740a8-17a3-451c-8f25-f4b6d880909a",
+        "authorName": "Kadir Bellikan",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tçok pratik ve kurulumu kolay",
+              "lastModified": {
+                "seconds": "1768129462",
+                "nanos": 330000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "tr",
+              "device": "a24",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a24 (Galaxy A24)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 3677
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "1b998e7a-a149-4cfe-8d50-ab56da5f5a4f",
+        "authorName": "KOBO PATRICK",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tvery great app",
+              "lastModified": {
+                "seconds": "1768127716",
+                "nanos": 242000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "a06",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a06 (Galaxy A06)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 300,
+                "glEsVersion": 196610,
+                "ramMb": 3658
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "a946aaa6-d5ce-4140-9e46-cae2a57153dc",
+        "authorName": "Oğuz Halis ÇAVUŞOĞLU",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tçok kolay kuruldu ve kolay bağlandı. inanılmaz başarılı. ses iletimi, mauel kayıt, hareket kaydı ve bildirimi, gece o lux çekimi müthiş... ön arka her iki kamerayı da kullanıyor, orta bir yere yerleştirip iki tarafı da görebilirsiniz... tek kamera (telefon) bağlayabildim demiştim ilk yorumda ama 2.yi de bağladım... 🥰 999 TL/Yıl ücret ile daha birçok pro özelliğe kavuşmak mümkün!... deneyeceğim... 😉",
+              "lastModified": {
+                "seconds": "1768126265",
+                "nanos": 463000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "tr",
+              "device": "pa3q",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "pa3q (Galaxy S25 Ultra)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1440,
+                "screenHeightPx": 3120,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 11114
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Geri bildiriminiz için teşekkür ederiz! Uygulamamızı kullandığınız için çok minnettarız ve kurulumun kolay olduğunu duyduğumuza sevindik. Daha fazla işlevsellik için Premium özelliklerimizi denemeyi unutmayın. Yardıma ihtiyacınız olursa, lütfen in-app 'Contact Us' veya support@alfred.camera üzerinden bizimle iletişime geçin.",
+              "lastModified": {
+                "seconds": "1768115456",
+                "nanos": 543000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "71721aff-89c1-4998-9aa1-b12f126c9b42",
+        "authorName": "Du",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tParece ser muito bom, fácil conexão com outros celulares, bem intuitivo, porém, qualquer movimento que se faça, seja para configurar ou ver outra transmissão tem anúncios, não sou contra, mas chega ser chato. E também, por ser gratuito, não se consegue ver as gravações, a não ser que se baixe no celular controlador, mesmo assim tem que entrar nos arquivos para assistir e outros, zoom on-line e outros, infelizmente. O mais antigo tinha mais opções no modo gratuito, essa era acabou....",
+              "lastModified": {
+                "seconds": "1768126065",
+                "nanos": 860000000
+              },
+              "starRating": 2,
+              "reviewerLanguage": "pt",
+              "device": "cancun",
+              "androidOsVersion": 34,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "cancun (moto g14)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 400,
+                "glEsVersion": 196610,
+                "ramMb": 3814
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "35a4f62a-7266-40d7-aaa8-4a831338c86a",
+        "authorName": "Jethro Short",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tI used this with a female friend who asked me to install this and keep an eye on her as she was subject to domestic abuse by her partner! yes worked very well, had three phones around her house, worked 100% of the time",
+              "lastModified": {
+                "seconds": "1768120785",
+                "nanos": 651000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "cybert",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "cybert (motorola edge 60s pro)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1220,
+                "screenHeightPx": 2712,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 7436
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "2be2ee3d-3b77-4d16-86d7-f35fb85a19ab",
+        "authorName": "Ajaymordade Ajaymordade",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tgood",
+              "lastModified": {
+                "seconds": "1768120678",
+                "nanos": 766000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "malmo",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "malmo (moto g85 5G)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 400,
+                "glEsVersion": 196610,
+                "ramMb": 7414
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "6b21fc8a-28c8-4aad-bcff-7db4e53af7de",
+        "authorName": "ALBERTO BENAVIDES",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tottimo",
+              "lastModified": {
+                "seconds": "1768119318",
+                "nanos": 12000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "it",
+              "device": "a56x",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a56x (Galaxy A56 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 7420
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "820b08bc-9bcd-48af-942f-a9110f0dddbe",
+        "authorName": "Moises Gonzalez",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tNo he podido usar todas las los accesorios Por así decirlo porque necesito pagar mi mensualidad y no sé por qué no pasó mi tarjeta Tengo un problema con mi cuenta pero se ve que sí me va a servir muchísimo ahora mi duda es si puedo conectar más teléfonos para usarlos como cámara y poder verlos al mismo tiempo",
+              "lastModified": {
+                "seconds": "1768118425",
+                "nanos": 87000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "HNBRP-Q1",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "HNBRP-Q1 (HONOR Magic7 Lite)",
+                "manufacturer": "Honor",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1224,
+                "screenHeightPx": 2700,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 520,
+                "glEsVersion": 196610,
+                "ramMb": 11457
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "4280c9ee-3e9e-4432-b49b-bbe102a8aac7",
+        "authorName": "Andrea Castro",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\texelente",
+              "lastModified": {
+                "seconds": "1768116739",
+                "nanos": 520000000
+              },
+              "starRating": 4,
+              "reviewerLanguage": "es",
+              "device": "P606F20",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "P606F20 (Z2472)",
+                "manufacturer": "ZTE",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 3749
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "b197679c-4a2e-4f2f-a4c5-341814442446",
+        "authorName": "Kevin Huitron",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tbien",
+              "lastModified": {
+                "seconds": "1768116034",
+                "nanos": 922000000
+              },
+              "starRating": 4,
+              "reviewerLanguage": "es",
+              "device": "P963F01",
+              "androidOsVersion": 28,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "P963F01 (ZTE Blade V10 Vita)",
+                "manufacturer": "ZTE",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1520,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 1819
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "2e265cf3-4a75-469b-b4fd-ae97d7bfc8bb",
+        "authorName": "Mulia Suprapto",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tmanfaat banget",
+              "lastModified": {
+                "seconds": "1768112981",
+                "nanos": 236000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "id",
+              "device": "j4primelte",
+              "androidOsVersion": 28,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "j4primelte (Galaxy J4+)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1480,
+                "nativePlatform": "ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 280,
+                "glEsVersion": 196608,
+                "ramMb": 1823
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "0996c61b-d1fb-4b56-ae46-2aa9af51e426",
+        "authorName": "Sadi Cuevas",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tCOOL",
+              "lastModified": {
+                "seconds": "1768107997",
+                "nanos": 269000000
+              },
+              "starRating": 4,
+              "reviewerLanguage": "es",
+              "device": "HNTFY-Q",
+              "androidOsVersion": 33,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "HNTFY-Q (HONOR X8)",
+                "manufacturer": "Honor",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2388,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 5708
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "e748b97a-e50d-42d3-9723-ce7f65f88e42",
+        "authorName": "Rounak Jaiswal",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tawesome",
+              "lastModified": {
+                "seconds": "1768107377",
+                "nanos": 435000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "V2513",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "V2513 (V60e)",
+                "manufacturer": "vivo",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2392,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 7457
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "dd8fe891-dda5-4927-a033-127740615221",
+        "authorName": "Justo Macedo",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tMuy buena la aplicación",
+              "lastModified": {
+                "seconds": "1768100564",
+                "nanos": 196000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "emerald",
+              "androidOsVersion": 35,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "emerald (Redmi Note 14S)",
+                "manufacturer": "Redmi",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 7655
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "5013dc80-ed4f-4e15-b668-28a64d53ff82",
+        "authorName": "Coleman Davis",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\talsome",
+              "lastModified": {
+                "seconds": "1768099825",
+                "nanos": 884000000
+              },
+              "starRating": 4,
+              "reviewerLanguage": "en",
+              "device": "a16x",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a16x (Galaxy A16 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 3450
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "bc2a826b-31e1-4a36-9080-96a17659bd88",
+        "authorName": "K Mon",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tgreat program",
+              "lastModified": {
+                "seconds": "1768097562",
+                "nanos": 4000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "kiev",
+              "androidOsVersion": 30,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "kiev (moto g 5G)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 400,
+                "glEsVersion": 196610,
+                "ramMb": 5461
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "e89d3978-d4a0-447d-9a70-fa6b2accf362",
+        "authorName": "Soledad Benegas",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tExcelente aplicación",
+              "lastModified": {
+                "seconds": "1768089711",
+                "nanos": 648000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "redwood",
+              "androidOsVersion": 34,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "redwood (POCO X5 Pro 5G)",
+                "manufacturer": "POCO",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 7190
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "b03174fa-cff7-4d2c-83d6-19c05c4c9647",
+        "authorName": "Carlos Choque Romero",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tFunciona correctamente, y monitorea bien en versión gratuita",
+              "lastModified": {
+                "seconds": "1768086145",
+                "nanos": 784000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "OP595DL1",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "OP595DL1 (OnePlus 12)",
+                "manufacturer": "OnePlus",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1440,
+                "screenHeightPx": 3216,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 640,
+                "glEsVersion": 196610,
+                "ramMb": 15204
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "0cde2f4e-a58e-4e03-b1a1-44b046e153ac",
+        "authorName": "Sonny",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tDoesn't support dark mode and can't even watch at least a small amount of recordings without paying a subscription. 👎👎",
+              "lastModified": {
+                "seconds": "1768080909",
+                "nanos": 590000000
+              },
+              "starRating": 1,
+              "reviewerLanguage": "en",
+              "device": "g0q",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "g0q (Galaxy S22+)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 7220
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "39a31ecd-2f79-48af-9790-aaf470fdbc76",
+        "authorName": "Muhsin Karstarli",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tharika 😀",
+              "lastModified": {
+                "seconds": "1768078357",
+                "nanos": 219000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "tr",
+              "device": "apollo",
+              "androidOsVersion": 31,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "apollo (Mi 10T Pro)",
+                "manufacturer": "Xiaomi",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 7611
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "418f31d0-8c5e-4639-beaa-3146d8c7163c",
+        "authorName": "Henrique Souza",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tparece ser bom , estou testando agora",
+              "lastModified": {
+                "seconds": "1768073136",
+                "nanos": 607000000
+              },
+              "starRating": 4,
+              "reviewerLanguage": "pt",
+              "device": "rodin",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "rodin (POCO X7 Pro )",
+                "manufacturer": "POCO",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1220,
+                "screenHeightPx": 2712,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 520,
+                "glEsVersion": 196610,
+                "ramMb": 11312
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "e743fd8e-4150-45ee-9bd7-80e014a185bb",
+        "authorName": "Craig Blood",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tworks very well ....100%",
+              "lastModified": {
+                "seconds": "1768069816",
+                "nanos": 231000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "a05m",
+              "androidOsVersion": 34,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a05m (Galaxy A05)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 300,
+                "glEsVersion": 196610,
+                "ramMb": 3678
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "012cce4f-81e9-4a8e-a428-40f8c27d3c7f",
+        "authorName": "Donnie Thompson",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tIt's awesome. Works great.",
+              "lastModified": {
+                "seconds": "1768069002",
+                "nanos": 681000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "jfltecan",
+              "androidOsVersion": 21,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "jfltecan (Galaxy S4)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 1920,
+                "nativePlatform": "ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196608,
+                "ramMb": 1791
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're thrilled you're enjoying our app's simplicity and ease of use. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115465",
+                "nanos": 369000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "8456a27b-fd5c-4b2d-a2e4-f94e2e24c111",
+        "authorName": "BM Binney",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tdid not work",
+              "lastModified": {
+                "seconds": "1768065820",
+                "nanos": 279000000
+              },
+              "starRating": 1,
+              "reviewerLanguage": "en",
+              "device": "kansas",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "kansas (moto g - 2025)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1604,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 280,
+                "glEsVersion": 196610,
+                "ramMb": 3643
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "d484021b-1458-43d4-a1d3-045eec2f71b9",
+        "authorName": "Leonel Diaz",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tmuy buena",
+              "lastModified": {
+                "seconds": "1768061902",
+                "nanos": 215000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "angelican",
+              "androidOsVersion": 29,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "angelican (Redmi 9C NFC)",
+                "manufacturer": "Redmi",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 2772
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "1d337c1e-696e-458c-8354-4796df1cfec3",
+        "authorName": "rachid ouhsain",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tgooood",
+              "lastModified": {
+                "seconds": "1768060393",
+                "nanos": 998000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "fr",
+              "device": "a52sxq",
+              "androidOsVersion": 34,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a52sxq (Galaxy A52s 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 5371
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "dc7d2ad1-33be-4784-98c5-76d75b676240",
+        "authorName": "Lorenzo",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tmi arrivano le notifiche solo quando sono in casa, non mi serve a molto così, opterò per un altra soluzione... * uso la versione a pagamento",
+              "lastModified": {
+                "seconds": "1768058404",
+                "nanos": 264000000
+              },
+              "starRating": 1,
+              "reviewerLanguage": "it",
+              "device": "a23xq",
+              "androidOsVersion": 34,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a23xq (Galaxy A23 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2408,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 3460
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "160bf526-631c-4faf-bee2-c833e89d95de",
+        "authorName": "Dedisotong Sotong",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tSaya sangat suka dengan aplikasi ini",
+              "lastModified": {
+                "seconds": "1768056110",
+                "nanos": 631000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "id",
+              "device": "RE6054",
+              "androidOsVersion": 35,
+              "deviceMetadata": {
+                "productName": "RE6054 (realme C61)",
+                "manufacturer": "realme",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 3761
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "e666ded2-8b7e-4a5e-ad88-ded5c1c4a153",
+        "authorName": "Manju Devi",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\t👌",
+              "lastModified": {
+                "seconds": "1768054448",
+                "nanos": 798000000
+              },
+              "starRating": 4,
+              "reviewerLanguage": "en",
+              "device": "cactus",
+              "androidOsVersion": 28,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "cactus (Redmi 6A)",
+                "manufacturer": "Xiaomi",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1440,
+                "nativePlatform": "ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 1811
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "tokenPagination": {
+      "nextPageToken": "AGkSnOy0X-6maLXS7CxED0ldiCbS0ZdgJmhL9LVjdRpk79pGBGJ3shFmbFqjliUdkRnrNyfGIA4RJ_wIF2e5WXuWY5HH-mGowOywGuwdYKMl9Xt96BLkKs6hAWPRT7D_Me9rDUPAA-F8XcadksuNfW2ADX2KfdvEDlfzr79dc2MUBG8Jx_L2VHyzxxTTTH3evALoUkSlZ1agLUV-mihSqhsE95Getl4dxDOTdB-YYFJTL0xd7ElqJ0CQ-uy9OO4gLI3d8ngQyegYRW6BiCVgZsxvE7QXTbQgKw"
+    }
+  },
+  {
+    "reviews": [
+      {
+        "reviewId": "80fb16e0-c8ec-4580-bfaf-9628560e7f34",
+        "authorName": "Keyairo Miller",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tI love this app .!!",
+              "lastModified": {
+                "seconds": "1767941453",
+                "nanos": 174000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0"
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "ba2c163a-688f-4d64-a9a1-a96d774abe5e",
+        "authorName": "LRM",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\twow this really help me as a mom, thank you very much for developing this app. I hope I have the means to upgrade it to premium ASAP! in the meantime, I'd like to comment on the clarity of the visual. again, thank you, really!",
+              "lastModified": {
+                "seconds": "1767937350",
+                "nanos": 182000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "Infinix-X6858",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "Infinix-X6858 (NOTE 50)",
+                "manufacturer": "Infinix",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2436,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 7682
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We’re thrilled that our app is helping you as a mom. We appreciate your comments on visual clarity, and we hope you try our Premium features soon for an even better experience! If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115456",
+                "nanos": 906000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "460aede9-083b-4611-94c0-b7e45d4bbcac",
+        "authorName": "Modza Mario",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tเป็นแอปที่ดีมาก ใช้ฟรีไม่เสียตังถ้าอยากให้ดีขึ้นก็ต้องเสียตังค์อัพเกรดไม่ได้บังคับ ขอให้พัฒนาต่อไปเรื่อยๆ",
+              "lastModified": {
+                "seconds": "1767936776",
+                "nanos": 332000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "th",
+              "device": "V2204",
+              "androidOsVersion": 31,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "V2204 (Y16)",
+                "manufacturer": "Vivo",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 300,
+                "glEsVersion": 196610,
+                "ramMb": 3808
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "ขอบคุณสำหรับความคิดเห็นของคุณ! เรารู้สึกยินดีที่คุณพบว่าแอพของเราเป็นที่ใช้ได้ง่ายและมีคุณค่า หากคุณต้องการความช่วยเหลือ โปรดติดต่อเราผ่านช่องทาง 'ติดต่อเรา' ในแอพหรืออีเมล support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115456",
+                "nanos": 842000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "21c5ea43-9273-45d7-8551-de0a0521726d",
+        "authorName": "Тахмина",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tсупер",
+              "lastModified": {
+                "seconds": "1767936346",
+                "nanos": 872000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "ru",
+              "device": "willow",
+              "androidOsVersion": 30,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "willow (Redmi Note 8T)",
+                "manufacturer": "Redmi",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 3633
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Спасибо за ваш отзыв! Мы искренне ценим ваше использование нашего приложения и рады, что вам нравятся наши услуги. Если у вас возникнут проблемы с использованием, не стесняйтесь обращаться к нам через контактный раздел приложения или по электронной почте (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1768115457",
+                "nanos": 326000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "c7ccdff0-235b-4b93-abb8-ef571959777a",
+        "authorName": "ศิริบูรณ์",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tดีพอไช้เเท้าฟรีหมดคงดี",
+              "lastModified": {
+                "seconds": "1767935882",
+                "nanos": 999000000
+              },
+              "starRating": 4,
+              "reviewerLanguage": "th",
+              "device": "OP5EEDL1",
+              "androidOsVersion": 35,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "OP5EEDL1 (A5i Pro)",
+                "manufacturer": "Oppo",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1604,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 3590
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "ขอบคุณสำหรับข้อเสนอแนะแบบมีค่าของคุณ เรามุ่งมั่นปรับปรุงบริการของเราอย่างต่อเนื่องเพื่อรองรับความต้องการของคุณ เราจะส่งต่อข้อเสนอแนะนี้ไปยังฝ่ายที่เกี่ยวข้อง หากคุณมีข้อเสนอแนะแนวอื่น ๆ โปรดติดต่อเราผ่านแอป 'ติดต่อเรา' ได้เลย",
+              "lastModified": {
+                "seconds": "1768115456",
+                "nanos": 897000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "30399e0f-caf8-4349-9085-ebacc457603a",
+        "authorName": "Jason Stinson",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tit difficult to cancel subscription",
+              "lastModified": {
+                "seconds": "1767932523",
+                "nanos": 41000000
+              },
+              "starRating": 2,
+              "reviewerLanguage": "en",
+              "device": "bluejay",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "bluejay (Pixel 6a)",
+                "manufacturer": "Google",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 420,
+                "glEsVersion": 196610,
+                "ramMb": 5589
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your review. We're sorry to hear you're having trouble cancelling your subscription. Please use the in-app 'Contact Us' feature to provide more details and any relevant screenshots. We're here to help!",
+              "lastModified": {
+                "seconds": "1768115456",
+                "nanos": 940000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "cbd22bc7-658b-4e88-a5b3-d78ca3ed650d",
+        "authorName": "DNA",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tAlfred is so easy to use. set up. used it off and on for years",
+              "lastModified": {
+                "seconds": "1767931416",
+                "nanos": 931000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "y2q",
+              "androidOsVersion": 33,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "y2q (Galaxy S20+ 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1440,
+                "screenHeightPx": 3200,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 10601
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're thrilled to hear that you find Alfred so easy to use. If you haven't already, consider recommending us to friends or trying out our Premium features! If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115456",
+                "nanos": 843000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "06d7ceb9-7689-49a1-a358-9fc3bdf54128",
+        "authorName": "Wendell Sheffield",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tit's awesome",
+              "lastModified": {
+                "seconds": "1767926825",
+                "nanos": 751000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "PG65",
+              "androidOsVersion": 34,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "PG65 (PG65)",
+                "manufacturer": "Vortex",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 3761
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're thrilled that you're enjoying our services and find everything so easy to use. Feel free to recommend us to friends, and if you encounter any issues, please contact us via the in-app channel or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115456",
+                "nanos": 459000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "56b152cc-a1f1-4a4f-9461-b59e454c6c90",
+        "authorName": "Teak Crago",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tI have used Alfred in the past.Im disapointed with it now",
+              "lastModified": {
+                "seconds": "1767925895",
+                "nanos": 51000000
+              },
+              "starRating": 1,
+              "reviewerLanguage": "en",
+              "device": "mona",
+              "androidOsVersion": 35,
+              "deviceMetadata": {
+                "productName": "mona (moto g stylus 5G - 2025)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1220,
+                "screenHeightPx": 2712,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 7416
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback. We're sorry to hear Alfred didn't meet your expectations. We’re here to help! Please reach out via in-app 'Contact Us' or support@alfred.camera to share more details so we can assist you.",
+              "lastModified": {
+                "seconds": "1768115464",
+                "nanos": 87000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "061d8c8d-07bd-414f-8aa6-772e986aba4c",
+        "authorName": "Anthony Canas",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\t10 d 10",
+              "lastModified": {
+                "seconds": "1767925866",
+                "nanos": 124000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "HNTFY-Q",
+              "androidOsVersion": 33,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "HNTFY-Q (HONOR X8)",
+                "manufacturer": "Honor",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2388,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 5708
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por tu comentario! Apreciamos sinceramente que uses nuestra app y estamos emocionados de que disfrutes de la fiabilidad y la experiencia general que ofrece. Si encuentras problemas, no dudes en contactarnos a través del canal en la app o por correo (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1768115459",
+                "nanos": 244000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "98b22418-e30f-4c06-b946-dd8fd22c32b3",
+        "authorName": "Vitor Tavares",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tNao consigo fazer a assinatura para me tornar Premium.",
+              "lastModified": {
+                "seconds": "1767919000",
+                "nanos": 547000000
+              },
+              "starRating": 1,
+              "reviewerLanguage": "pt",
+              "device": "r9s",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "r9s (Galaxy S21 FE 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 7299
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Obrigado pela sua avaliação. Estamos aqui para ajudar você com a assinatura Premium. Por favor, use o recurso 'Fale Conosco' no app para compartilhar mais informações. Capturas de tela relevantes seriam úteis também! Se precisar de ajuda, entre em contato pelo 'Fale Conosco' ou e-mail support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115462",
+                "nanos": 71000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "1c143518-01e2-400f-8a6e-2c725eb987c2",
+        "authorName": "My KaReeM",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tดีมาก ชอบๆ",
+              "lastModified": {
+                "seconds": "1767918891",
+                "nanos": 329000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "th",
+              "device": "Infinix-X6873",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "Infinix-X6873 (GT 30 Pro)",
+                "manufacturer": "Infinix",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1224,
+                "screenHeightPx": 2720,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 11488
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "ขอบคุณสำหรับข้อเสนอแนะ! เราชื่นชมการใช้แอปของคุณและดีใจที่คุณสนุกกับมัน! หากต้องการช่วยเหลือ สามารถติดต่อเราผ่าน 'ติดต่อเรา' ในแอปหรือติดต่อ support@alfred.camera",
+              "lastModified": {
+                "seconds": "1768115456",
+                "nanos": 798000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "7e84f65c-1c1e-470e-a30b-f8c21bd52131",
+        "authorName": "Richard Wright",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tbest thing going when you have things go missing and you want to know why",
+              "lastModified": {
+                "seconds": "1767915459",
+                "nanos": 226000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "a16x",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "a16x (Galaxy A16 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 3450
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We sincerely appreciate your use of our app and are thrilled that you're enjoying our services. If you encounter any issues, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768028919",
+                "nanos": 863000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "75b862a8-c5b7-4012-bdd9-19bd277f6935",
+        "authorName": "Ricardo Mora",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tuna buena opción si no cuentas con camaras de vigilancia me gusta mucho la aplicación fácil de usar",
+              "lastModified": {
+                "seconds": "1767913855",
+                "nanos": 387000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "degas",
+              "androidOsVersion": 35,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "degas (Xiaomi 14T)",
+                "manufacturer": "Xiaomi",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1220,
+                "screenHeightPx": 2712,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 520,
+                "glEsVersion": 196610,
+                "ramMb": 11314
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por tu comentario! Agradecemos sinceramente que uses nuestra aplicación y nos alegra saber que disfrutas de nuestros servicios, especialmente de la facilidad de uso. Si necesitas ayuda, por favor contáctanos a través del canal de la aplicación o envía un correo a support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 807000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "681b78c3-b506-4ca6-8916-485b14bcacf1",
+        "authorName": "Gustavo Gulino",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tmuy bueno 😊",
+              "lastModified": {
+                "seconds": "1767910820",
+                "nanos": 709000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "HONG_KONG",
+              "androidOsVersion": 30,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "HONG_KONG (Alcatel 1S)",
+                "manufacturer": "TCT (Alcatel)",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 2813
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por tu comentario! Nos alegra saber que disfrutas de la simplicidad de nuestra app. Si encuentras algún problema, no dudes en contactarnos a través del canal de la app o por email (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 665000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "b8bdd7a7-5834-4716-9b95-065b9a0602ba",
+        "authorName": "Asep Wahyudin",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tsanagt berguna",
+              "lastModified": {
+                "seconds": "1767909494",
+                "nanos": 901000000
+              },
+              "starRating": 4,
+              "reviewerLanguage": "id",
+              "device": "OPD4A1L1",
+              "androidOsVersion": 33,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "OPD4A1L1 (OPPO Reno7 5G)",
+                "manufacturer": "Oppo",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 7547
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Terima kasih atas masukan Anda! Kami sangat menghargai penggunaan aplikasi kami dan senang Anda menikmati layanan kami. Jika Anda memiliki saran untuk perbaikan, silakan beri tahu kami! Jika Anda perlu bantuan, silakan hubungi kami melalui 'Hubungi Kami' di aplikasi atau email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115456",
+                "nanos": 945000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "12938cd6-ca59-42b9-8b92-4b88b4299a26",
+        "authorName": "林維翔",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\t好",
+              "lastModified": {
+                "seconds": "1767901975",
+                "nanos": 101000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "zh-Hant",
+              "device": "evergreen",
+              "androidOsVersion": 33,
+              "appVersionCode": 5824300,
+              "appVersionName": "2025.25.2",
+              "deviceMetadata": {
+                "productName": "evergreen (POCO M4 Pro 5G)",
+                "manufacturer": "POCO",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 5625
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "感謝您的反饋！我們真心感謝您使用我們的應用程序，並很高興您喜歡我們的服務。如果您遇到任何使用相關的問題，請隨時通過應用內渠道或電子郵件 (support@alfred.camera) 聯繫我們。",
+              "lastModified": {
+                "seconds": "1768115457",
+                "nanos": 4000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "f786ae34-bfc0-40de-afc3-ad9e4d32bc9b",
+        "authorName": "Juan Nava",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tI ts so good seguridad sistemss...I recomend so much.",
+              "lastModified": {
+                "seconds": "1767901181",
+                "nanos": 692000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "dm1q",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "dm1q (Galaxy S23)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 7073
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're excited to hear that you find our security system so good and valuable. If you haven't already, feel free to share your recommendations with others who might benefit. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115455",
+                "nanos": 713000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "4ade99e3-9729-4f18-80fb-a03bd04057f0",
+        "authorName": "Gopal Gotam",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tgood 👍",
+              "lastModified": {
+                "seconds": "1767897438",
+                "nanos": 973000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "RE5CA3L1",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "RE5CA3L1 (realme 13 Pro+ 5G)",
+                "manufacturer": "realme",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2412,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 7413
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're thrilled you're enjoying our app. We strive to keep it simple and reliable. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 909000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "900409d4-3d8a-47db-a248-c9797802f877",
+        "authorName": "Ali_kate",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tMuy buena app",
+              "lastModified": {
+                "seconds": "1767895531",
+                "nanos": 352000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "b0q",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "b0q (Galaxy S22 Ultra)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1440,
+                "screenHeightPx": 3088,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 11204
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por tu comentario! Apreciamos mucho que uses nuestra app y nos alegra saber que la encuentras muy buena. ¡Si puedes, recomiéndala a tus amigos! Si necesitas ayuda, contáctanos a través de la opción 'Contáctanos' en la app o envía un correo a support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 641000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "2fa26bc2-5b43-43ba-ba88-57c35a36c37f",
+        "authorName": "Jonatan Retamar",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tx ahora todo perfecto",
+              "lastModified": {
+                "seconds": "1767894116",
+                "nanos": 75000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "a52q",
+              "androidOsVersion": 31,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a52q (Galaxy A52)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 420,
+                "glEsVersion": 196610,
+                "ramMb": 7489
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por su comentario! Nos alegra saber que disfruta de nuestra aplicación. Su facilidad de uso la convierte en una excelente opción. Si encuentra algún problema relacionado con el uso, contáctenos a través del canal de la aplicación o por correo electrónico (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 755000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "25417aff-3739-4b1b-b7f7-6ee2e11f6d6d",
+        "authorName": "Gökhan Arslan",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tsehr schon bravo",
+              "lastModified": {
+                "seconds": "1767893610",
+                "nanos": 46000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "de",
+              "device": "g0s",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "g0s (Galaxy S22+)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 7271
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Vielen Dank für Ihr Feedback! Wir freuen uns, dass Sie unsere App genießen. Es ist großartig zu hören, wie einfach sie zu bedienen ist! Wenn Sie Fragen haben, kontaktieren Sie uns bitte über die In-App-Funktion oder per E-Mail (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 761000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "33cdd8e1-c6cc-4650-8e00-1db42a120dae",
+        "authorName": "ko thet",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tgood",
+              "lastModified": {
+                "seconds": "1767893085",
+                "nanos": 569000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "courbet",
+              "androidOsVersion": 33,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "courbet (Mi 11 Lite)",
+                "manufacturer": "Xiaomi",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 5569
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're thrilled that you're enjoying our services. We pride ourselves on offering a reliable experience. If you encounter any issues, please contact us via the in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 883000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "70b9cbf1-bf7c-45bb-805f-b032792cad8f",
+        "authorName": "Kalyan Mohapatra",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tvery good application",
+              "lastModified": {
+                "seconds": "1767890201",
+                "nanos": 134000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "scout",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "scout (motorola edge 60)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1220,
+                "screenHeightPx": 2712,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 7416
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're thrilled you're enjoying our app and find it very useful! If you haven't yet, we encourage you to check out our Premium features to get even more value. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 823000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "bdecc53d-5c94-4288-afb3-ca2fbbb965c2",
+        "authorName": "Manuel",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tlo estoy probando",
+              "lastModified": {
+                "seconds": "1767884908",
+                "nanos": 690000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "BV7300",
+              "androidOsVersion": 34,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "BV7300 (BV7300)",
+                "manufacturer": "Blackview",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1604,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 5746
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por probar AlfredCamera! Espero que lo encuentres simple y confiable para tus necesidades. Si tienes algún problema, no dudes en contactarnos a través de 'Contáctanos' en la app o envíanos un correo a support@alfred.camera. ¡Estamos aquí para ayudarte!",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 606000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "12505fee-cd59-49a3-8548-852805a392ca",
+        "authorName": "Mochammad Irianto",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tok.... bos setelah saya menggunakan aplikasi cctv pengaman rumah, melalui hp...saya jadi tidak was\" lagi. Karena saya bisa memantau rumah meski saya tinggal bekerja. terima kasih boss infonya.",
+              "lastModified": {
+                "seconds": "1767884760",
+                "nanos": 681000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "id",
+              "device": "CPH1909",
+              "androidOsVersion": 27,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "CPH1909 (CPH1909)",
+                "manufacturer": "Oppo",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1520,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 2778
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Terima kasih atas umpan balik Anda! Kami senang aplikasi kami membuat Anda lebih tenang saat memantau rumah. Jika Anda mengalami masalah penggunaan, jangan ragu untuk menghubungi kami melalui saluran dalam aplikasi atau email (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1768115456",
+                "nanos": 989000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "44745a22-e57e-48f3-9e61-d6ca25a72750",
+        "authorName": "Ali Yilmaz",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tsuper",
+              "lastModified": {
+                "seconds": "1767882742",
+                "nanos": 853000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "tr",
+              "device": "on7xelte",
+              "androidOsVersion": 27,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "on7xelte (Galaxy J7 Prime)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 1920,
+                "nativePlatform": "ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 2815
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Geri bildiriminiz için teşekkürler! Uygulamamızdan memnun kaldığınızı görmek harika. Eğer herhangi bir sorunla karşılaşırsanız, lütfen uygulama içi 'İletişime Geç' veya support@alfred.camera üzerinden bize ulaşın.",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 901000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "b2a89fbe-ae53-480e-a19d-af516f0c54cf",
+        "authorName": "Karim “Adil” El amrani",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tgenial",
+              "lastModified": {
+                "seconds": "1767878983",
+                "nanos": 944000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "a05s",
+              "androidOsVersion": 35,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "a05s (Galaxy A05s)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 3601
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por tus comentarios! Agradecemos sinceramente el uso de nuestra aplicación y estamos encantados de que estés disfrutando de nuestros servicios. Si encuentras algún problema, no dudes en contactarnos a través del canal de la app o por correo (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 570000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "96fa8579-a37c-43e8-a062-31a1781be420",
+        "authorName": "Carlos Bermudez",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tbien",
+              "lastModified": {
+                "seconds": "1767877373",
+                "nanos": 934000000
+              },
+              "starRating": 4,
+              "reviewerLanguage": "es",
+              "device": "a10s",
+              "androidOsVersion": 30,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a10s (Galaxy A10s)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1520,
+                "nativePlatform": "ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 280,
+                "glEsVersion": 196610,
+                "ramMb": 1791
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por tu comentario! Agradecemos sinceramente que uses nuestra aplicación y estamos encantados de que estés disfrutando de nuestros servicios. Si tienes sugerencias sobre cómo mejorar tu experiencia, ¡háznoslo saber! Si necesitas ayuda, contáctanos a través de 'Contáctanos' en la app o envía un correo a support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 591000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "9c37a364-c42c-4737-ad8a-f8ae0e500aba",
+        "authorName": "Arvasi Yildiz",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tgüzel, emeği geçenlere teşekkürler...",
+              "lastModified": {
+                "seconds": "1767871772",
+                "nanos": 824000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "tr",
+              "device": "RE5C86L1",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "RE5C86L1 (NARZO 70 5G)",
+                "manufacturer": "realme",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 5530
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Geri bildiriminiz için teşekkür ederiz! Uygulamamızı kullandığınız için minnettarız ve hizmetlerinizden memnun kaldığınızı duyduğumuza sevindik. Herhangi bir kullanım sorunuyla karşılaşırsanız, lütfen uygulama içi kanal veya email (support@alfred.camera) üzerinden bizimle iletişime geçin.",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 787000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "f00f354d-f3ef-4bf4-9851-618485fcc32a",
+        "authorName": "Harish Kosam",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tAlfredCamera is fantastic for turning old phones into reliable CCTV. It’s incredibly easy to set up and provides excellent security for free.\"",
+              "lastModified": {
+                "seconds": "1767864090",
+                "nanos": 497000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "RE58A0L1",
+              "androidOsVersion": 33,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "RE58A0L1 (realme 8s 5G)",
+                "manufacturer": "realme",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 5625
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We sincerely appreciate your use of our app and are thrilled that you're enjoying the simplicity and reliability of our services. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768028919",
+                "nanos": 723000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "61124362-5ba8-4ee0-9c5a-dd94d1884aad",
+        "authorName": "Иван Владимирович",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\t😂",
+              "lastModified": {
+                "seconds": "1767863886",
+                "nanos": 675000000
+              },
+              "starRating": 1,
+              "reviewerLanguage": "ru",
+              "device": "PD1612",
+              "androidOsVersion": 23,
+              "deviceMetadata": {
+                "productName": "PD1612 (Y67)",
+                "manufacturer": "Vivo",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1280,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196608,
+                "ramMb": 3854
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Спасибо за ваш отзыв! Если у вас возникнут проблемы с приложением, пожалуйста, свяжитесь с нами через раздел \"Свяжитесь с нами\" в приложении или по электронной почте support@alfred.camera. Мы всегда рады помочь!",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 736000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "314412ce-daf3-45cf-b45e-0ff57532f5f6",
+        "authorName": "Kristina Kirova",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tTotally worth it!",
+              "lastModified": {
+                "seconds": "1767863149",
+                "nanos": 102000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "dm1q",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "dm1q (Galaxy S23)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 7073
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're thrilled that you're enjoying our services and find them valuable. If you haven't yet, consider sharing your great experience with others! If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 810000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "3979fdca-163a-4fb7-bf0a-a6ddc9bd084a",
+        "authorName": "huzaifa huzaifa",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tGood",
+              "lastModified": {
+                "seconds": "1767856597",
+                "nanos": 870000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "HWLDN-Q",
+              "androidOsVersion": 26,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "HWLDN-Q (HUAWEI Y7 2018)",
+                "manufacturer": "Huawei",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1440,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 2836
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We sincerely appreciate your use of our app and are thrilled that you're enjoying our services. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 769000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "5e2e199b-6c29-48f7-86cd-7b2b15d73c29",
+        "authorName": "Ronda Roczey",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tamazing. this app really works I am beyond satisfied with Alfred home security",
+              "lastModified": {
+                "seconds": "1767851550",
+                "nanos": 190000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "shiba",
+              "androidOsVersion": 34,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "shiba (Pixel 8)",
+                "manufacturer": "Google",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 420,
+                "glEsVersion": 196610,
+                "ramMb": 7558
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We sincerely appreciate your use of our app and are thrilled that you're enjoying our services. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115453",
+                "nanos": 497000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "3f35adc8-fb79-49e9-a1fb-e56ecd8fa929",
+        "authorName": "Sunil Avghade",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tbest camera",
+              "lastModified": {
+                "seconds": "1767849425",
+                "nanos": 678000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "excalibur",
+              "androidOsVersion": 31,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "excalibur (Redmi Note 9 Pro Max)",
+                "manufacturer": "Redmi",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 5580
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're thrilled you're enjoying our camera and finding it so effective and easy to use. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115453",
+                "nanos": 527000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "3476be7a-5c3c-45bc-be9b-0b815818a496",
+        "authorName": "Fábio jojua macahrre",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tisso aí boa ideia, lets Go baby",
+              "lastModified": {
+                "seconds": "1767847131",
+                "nanos": 246000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "pt",
+              "device": "a07",
+              "androidOsVersion": 35,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "a07 (Galaxy A07)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 300,
+                "glEsVersion": 196610,
+                "ramMb": 3576
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Obrigado pelo seu feedback! Estamos felizes que você está gostando do nosso app. Se você tiver amigos que podem se beneficiar, por favor, recomende-nos! Se precisar de ajuda, entre em contato pelo canal na app ou pelo email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115454",
+                "nanos": 583000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "2a56538a-7e62-469c-a53d-fbc2cd967cbf",
+        "authorName": "Edy Aurafi",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tapp multo bom, tô usando como câmera 📷 um celular bem antigo e funciona perfeitamente, parabéns.",
+              "lastModified": {
+                "seconds": "1767844356",
+                "nanos": 976000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "pt",
+              "device": "a15",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a15 (Galaxy A15)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 3638
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Obrigado pelo seu feedback! Estamos felizes que você esteja gostando da confiabilidade do nosso app com seu celular antigo. Se precisar de ajuda, entre em contato pelo 'Fale Conosco' no app ou pelo email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115453",
+                "nanos": 606000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "56e64853-9a45-4229-bac4-cb0a7a6682f7",
+        "authorName": "Kim Zapeta",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tmuy bueno",
+              "lastModified": {
+                "seconds": "1767843900",
+                "nanos": 737000000
+              },
+              "starRating": 1,
+              "reviewerLanguage": "es",
+              "device": "a23",
+              "androidOsVersion": 34,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a23 (Galaxy A23)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2408,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 3589
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "We are sorry to hear that your experience wasn’t what you expected. Can you please share more details about the issue you're facing? We want to help! If you need assistance, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115453",
+                "nanos": 608000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "f5329aa9-95c1-4d84-b9aa-a780e6086e85",
+        "authorName": "أم اسعد",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tممتاز",
+              "lastModified": {
+                "seconds": "1767843315",
+                "nanos": 601000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "ar",
+              "device": "selene",
+              "androidOsVersion": 33,
+              "deviceMetadata": {
+                "productName": "selene (Redmi 10 Prime)",
+                "manufacturer": "Radger",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 3708
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "شكرًا لتقييمك! نحن نقدر استخدامك لتطبيقنا ونسعد بأنك تستمتع بخدماتنا. لا تتردد في مشاركة تجربتك مع الآخرين! إذا واجهت أي مشاكل تتعلق بالاستخدام، يرجى الاتصال بنا عبر القناة داخل التطبيق أو عبر البريد الإلكتروني (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1768115453",
+                "nanos": 500000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "c4dbdb25-644d-4650-a6d5-ad119aea34f4",
+        "authorName": "Daniel Parenteau",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tworks",
+              "lastModified": {
+                "seconds": "1767841481",
+                "nanos": 2000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "kansas",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "kansas (moto g - 2025)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1604,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 280,
+                "glEsVersion": 196610,
+                "ramMb": 3643
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We appreciate your use of our app, thrilled you're enjoying its reliability. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115453",
+                "nanos": 679000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "5d44d98a-d56d-4b9b-bbe0-003a4492deac",
+        "authorName": "Alexander Correa",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tHello, guys! For some reason the app is a little slow after the update, To show the live, and disabling and enabling it. Thanks.",
+              "lastModified": {
+                "seconds": "1767840625",
+                "nanos": 470000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "PAN_sprout",
+              "androidOsVersion": 30,
+              "appVersionCode": 5824300,
+              "appVersionName": "2025.25.2",
+              "thumbsUpCount": 1,
+              "thumbsDownCount": 5,
+              "deviceMetadata": {
+                "productName": "PAN_sprout (Nokia 4.2)",
+                "manufacturer": "Nokia",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1520,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 300,
+                "glEsVersion": 196610,
+                "ramMb": 2850
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por tu reseña! Nos alegra que disfrutes de la app. Si está funcionando lentamente tras la actualización, puedes probar nuestras sugerencias de solución aquí: https://url.alfredcamera.app/page/8EA8. Si necesitas ayuda, contáctanos a través de 'Contáctanos' en la app o escribe a support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768028917",
+                "nanos": 449000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "ec0c7fa6-2bd5-47bb-8d06-286eb9bb591d",
+        "authorName": "Erik Stillion",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tpretty decent besides having to pay for a upgrade to get most out of it",
+              "lastModified": {
+                "seconds": "1767839313",
+                "nanos": 812000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "a03su",
+              "androidOsVersion": 33,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "a03su (Galaxy A03s)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1600,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 280,
+                "glEsVersion": 196610,
+                "ramMb": 2783
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your positive feedback! We're glad you find it decent. We believe our Premium features truly enhance the experience. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768115453",
+                "nanos": 529000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "b2d8fbaf-f185-4a52-8232-b82933c0b89e",
+        "authorName": "Gogo Enchev",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tсупер е",
+              "lastModified": {
+                "seconds": "1767836119",
+                "nanos": 978000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "bg",
+              "device": "a14m",
+              "androidOsVersion": 34,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a14m (Galaxy A14)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2408,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 3695
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Благодарим ви за обратната връзка! Ценим вашето използване на нашето приложение и сме доволни, че се наслаждавате на услугите ни. Ако срещнете проблеми с използването, не се колебайте да се свържете с нас чрез приложението или по имейл (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1768115453",
+                "nanos": 528000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "11a30192-0e77-4a29-91bb-6e004cf78ab0",
+        "authorName": "SIDNEI MANFREDI",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tOtimo",
+              "lastModified": {
+                "seconds": "1767834187",
+                "nanos": 972000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "pt",
+              "androidOsVersion": 24,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0"
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "03a57e17-9a35-4b87-96dd-f9c5fc2be8a4",
+        "authorName": "Gp Google",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tvery good for me",
+              "lastModified": {
+                "seconds": "1767824107",
+                "nanos": 126000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "itel-A662LM",
+              "androidOsVersion": 31,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "itel-A662LM (itel A60s)",
+                "manufacturer": "Itel",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1612,
+                "nativePlatform": "ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 3864
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're thrilled that you're enjoying our app and find it valuable. Don't forget to share your experience with others or explore our Premium features! If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768028918",
+                "nanos": 17000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "35a4f2d3-1ab6-4367-82e2-5a76f27c6162",
+        "authorName": "Juan Curro",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tun poco inestable con el wifi, se paraliza cada cierto tiempo",
+              "lastModified": {
+                "seconds": "1767814956",
+                "nanos": 666000000
+              },
+              "starRating": 4,
+              "reviewerLanguage": "es",
+              "device": "a26xs",
+              "androidOsVersion": 36,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a26xs (Galaxy A26 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 7398
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por tus comentarios! Nos alegra que te guste en general. Parece que la conexión Wi-Fi tiene fallos. Puedes intentar las sugerencias de solución aquí: https://url.alfredcamera.app/page/8EA8. Si necesitas más ayuda, contáctanos en 'Contáctenos' en la app o por email a support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768028917",
+                "nanos": 742000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "d7cb536e-c2e3-456e-b9bc-11c96cb73d47",
+        "authorName": "Pablo Bazan",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\texcelente 5 estrellas",
+              "lastModified": {
+                "seconds": "1767811538",
+                "nanos": 663000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "bogota",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "bogota (moto g56 5G)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 390,
+                "glEsVersion": 196610,
+                "ramMb": 7600
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por tu comentario! Nos alegra saber que nuestra app es excelente y fácil de usar. Si encuentras algún problema relacionado con el uso, no dudes en contactarnos a través del canal en la app o por email (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1768028917",
+                "nanos": 780000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "84a6c890-b0bd-4384-b4e8-31420e556207",
+        "authorName": "Lightn",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tLooking for perfect. Well y'all made it.",
+              "lastModified": {
+                "seconds": "1767811391",
+                "nanos": 342000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "kansas",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "kansas (moto g - 2025)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1604,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 280,
+                "glEsVersion": 196610,
+                "ramMb": 3643
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're glad you're enjoying the simplicity of our app. If you encounter any usage-related issues, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768028917",
+                "nanos": 980000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "ac0c8349-49b7-49dc-ad5c-cddfc4a98ef2",
+        "authorName": "Fabian garcia riquelme",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\texcelente 👌",
+              "lastModified": {
+                "seconds": "1767809965",
+                "nanos": 367000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "a36xq",
+              "androidOsVersion": 35,
+              "appVersionCode": 5868300,
+              "appVersionName": "2026.1.0",
+              "deviceMetadata": {
+                "productName": "a36xq (Galaxy A36 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 7380
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por tu comentario! Nos alegra saber que disfrutas de la simplicidad de nuestra app. Si encuentras algún problema, contáctanos a través del canal de la app o por email a support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1768028917",
+                "nanos": 718000000
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "tokenPagination": {
+      "nextPageToken": "AGkSnOzWIB3fGe_ymveAv3wQSmQIneaiUWUhgE2cX7_h3T-q_0HUP6Prj7F8r8JZq31JU-BCmXwyaCjquN_wBvOn84S9EvxCHIFeLMrcb74MlVOojVw_3HlUUtboIIG-1j-qpPajtJEdHaddkQJ7JijQ0wEZE295XlNnzZsOUivBpy15rAqwcoXPS4kTNGm9yoMMH4RAZ84k7XGyd5dMhEnwLKXCU9De5PFRLap-E7ZwIARfROdTZWH-uvuL00qEpFSWBkyLzG6OjXW-wrkrANcCX6nQ4rK8Rl0Ko9Qhp1Pf6v5yi_VVCvc"
+    }
+  },
+  {
+    "reviews": [
+      {
+        "reviewId": "6e802eab-5357-4350-abd2-2b8994062876",
+        "authorName": "Andres Valenzuela",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tfunciona muy bien 👌",
+              "lastModified": {
+                "seconds": "1767645497",
+                "nanos": 596000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "river",
+              "androidOsVersion": 34,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "river (Redmi 12 5G)",
+                "manufacturer": "Redmi",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2460,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 3479
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por tus comentarios! Agradecemos sinceramente tu uso de nuestra app y nos alegra que disfrutes de su simplicidad y efectividad. Si encuentras algún problema, no dudes en contactarnos a través del canal en la app o por correo (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 585000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "ceb0ec09-823e-41ff-9901-24dd604f478e",
+        "authorName": "JR Tattoo Studio Art",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tllevo muchos años usándola en el modo pago incluso excelente experiencia hace mucho que no la usaba volví a activar y evitó tantos cambios que wow excelentes cambios se ve que han mejorado mucho mi sugerencia globalizan los dos planes que tienen quita en el estándar y el premium y hagan una Unión de los dos en un plan plus así tendríamos todos los servicios un solo plan",
+              "lastModified": {
+                "seconds": "1767645175",
+                "nanos": 871000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "denver",
+              "androidOsVersion": 31,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "thumbsUpCount": 417,
+              "thumbsDownCount": 155,
+              "deviceMetadata": {
+                "productName": "denver (moto g stylus 5G)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 400,
+                "glEsVersion": 196610,
+                "ramMb": 3504
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Muchas gracias por tus comentarios! Nos alegra saber que has tenido una experiencia excelente. Apreciamos tu sugerencia sobre los planes. Si tienes más ideas, compártelas con nosotros a través del 'Contáctanos' en la app. Si necesitas ayuda, contáctanos vía el 'Contáctanos' en la app o al email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 501000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "c09e5fc4-67b3-4b57-a5c4-ed56500b3393",
+        "authorName": "Darrell Hancock",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tReally easy ui, price is affordable for the upgrade to premium.",
+              "lastModified": {
+                "seconds": "1767644886",
+                "nanos": 976000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "beyond2q",
+              "androidOsVersion": 31,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "beyond2q (Galaxy S10+)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1440,
+                "screenHeightPx": 3040,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 420,
+                "glEsVersion": 196610,
+                "ramMb": 7461
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We appreciate your use of our app and are thrilled you're enjoying our services. We're happy you find our UI easy to use. Feel free to recommend us or try our Premium features! If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 363000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "a230dc2a-2040-4b6c-be27-fecbf1255cb8",
+        "authorName": "Jorge Ramirez",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tperfect very service thank God",
+              "lastModified": {
+                "seconds": "1767638532",
+                "nanos": 28000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "a15x",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "a15x (Galaxy A15 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 3559
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're thrilled that you're enjoying our services. Our app is designed to be simple and reliable for your needs. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 335000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "026e748c-2171-4f99-9ef0-00f4e41d3a2e",
+        "authorName": "Tara Ramey",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tlove this app",
+              "lastModified": {
+                "seconds": "1767637612",
+                "nanos": 856000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "androidOsVersion": 29,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0"
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We sincerely appreciate your use of our app and are thrilled that you're enjoying our services. Don’t forget to share your positive experience with others! If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 332000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "22981b74-dcca-4101-af12-4efdb32bf7b0",
+        "authorName": "Hany Mahi",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tamazing",
+              "lastModified": {
+                "seconds": "1767630644",
+                "nanos": 481000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "tokay",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "tokay (Pixel 9)",
+                "manufacturer": "Google",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2424,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 420,
+                "glEsVersion": 196610,
+                "ramMb": 11548
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We appreciate your use of our app and are thrilled you're enjoying our services. We pride ourselves on simplicity and ease of use. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 261000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "b9f2a001-813e-406e-91df-3ed1df4953a1",
+        "authorName": "Julio Aju",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\texcelente app",
+              "lastModified": {
+                "seconds": "1767624661",
+                "nanos": 432000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "es",
+              "device": "t2q",
+              "androidOsVersion": 35,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "t2q (Galaxy S21+ 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 7362
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "¡Gracias por tu opinión! Apreciamos tu uso de nuestra app y estamos encantados de que disfrutes de su simplicidad. Si tienes algún problema, contáctanos a través del canal de la app o por email (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 532000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "a685a783-2c32-4376-a027-53d3d8ebb34c",
+        "authorName": "Kevin Sullivan",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tamazingly simple to use",
+              "lastModified": {
+                "seconds": "1767622225",
+                "nanos": 53000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "a15x",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "a15x (Galaxy A15 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 3559
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We sincerely appreciate your use of our app and are thrilled that you're enjoying our services. It's great to hear that you find it easy to use! If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 272000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "e944a28b-786f-4d65-9143-14b7f86b501f",
+        "authorName": "Heather Hamilton",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tBefore the update I could quickly see how many people were watching a camera, but now you have to actually click on the camera to see how many people are watching. I don't like having to click to see the number.",
+              "lastModified": {
+                "seconds": "1767621831",
+                "nanos": 929000000
+              },
+              "starRating": 2,
+              "reviewerLanguage": "en",
+              "device": "b0q",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "thumbsUpCount": 217,
+              "thumbsDownCount": 69,
+              "deviceMetadata": {
+                "productName": "b0q (Galaxy S22 Ultra)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1440,
+                "screenHeightPx": 3088,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 11204
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your review. We're sorry to hear Alfred didn't match your expectation. Please share more details about your issue by using the in-app 'Contact Us' channel so we can assist you better. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1767856363",
+                "nanos": 819000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "0b397c08-5230-4e2d-bf89-e56fb22b6fe5",
+        "authorName": "Андрей Бибиков",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tбыло Прекрасно, но начались танцы с бубном,дома по вай фай устройства между собой соединяются камера-монитор, но только ушел из дома,все связи нет ,разработчики,скажите а зачем тогда вообще это приложение нужно,если я не могу удаленно контролировать свои устройства,все испортила ваша жадность,я и рад бы купить,но не в нашем санкционном поле. верните приложение как было раньше.",
+              "lastModified": {
+                "seconds": "1767620035",
+                "nanos": 386000000
+              },
+              "starRating": 1,
+              "reviewerLanguage": "ru",
+              "device": "TECNO-LI9",
+              "androidOsVersion": 35,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "thumbsUpCount": 2,
+              "deviceMetadata": {
+                "productName": "TECNO-LI9 (TECNO POVA 6 Pro 5G )",
+                "manufacturer": "Tecno",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2436,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 11637
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Спасибо, что обратились к нам! Мне очень жаль слышать о ваших проблемах с подключением. Можете попробовать советы по устранению неполадок по этой ссылке: https://url.alfredcamera.app/page/8EA8? Если это не поможет, свяжитесь с нами через \"Связаться с нами\" в приложении.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 852000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "68b0ab2b-ce42-46b3-8dad-8e80e2d87e3b",
+        "authorName": "Calin Andrei",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tBun pentru supravegherea casei. Totuși ar fi fost mai bine dacă mai lăsau și câteva funcții din Premium în free. Cum ar fi zooom-ul. Ca o concluzie: Recomand!",
+              "lastModified": {
+                "seconds": "1767616957",
+                "nanos": 26000000
+              },
+              "starRating": 4,
+              "reviewerLanguage": "ro",
+              "device": "a56x",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "a56x (Galaxy A56 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 7420
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Îți mulțumim pentru feedback! Căutăm mereu modalități de a ne îmbunătăți serviciile! Ne-ar plăcea să știm de ce ești interesat de funcția de zoom și cât de importantă este pentru tine. Te rugăm să ne oferi mai multe detalii prin canalul 'Contactați-ne' din aplicație.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 102000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "8dc7ec63-6d91-48a0-81bc-b4ee3732c4b4",
+        "authorName": "Alshif Abbasi",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tbhaut accha app",
+              "lastModified": {
+                "seconds": "1767615400",
+                "nanos": 550000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "androidOsVersion": 27,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0"
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We appreciate your use of our app and are thrilled you're enjoying our services. If you encounter any usage-related issues, please feel free to contact us through the in-app channel or via email (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 298000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "526d6863-3cd6-43ba-96eb-9695784e62bc",
+        "authorName": "Sănătatea Ta",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tConsider că este cel mai bun program de transformarea unui telefon în cameră.",
+              "lastModified": {
+                "seconds": "1767613379",
+                "nanos": 332000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "ro",
+              "device": "liber",
+              "androidOsVersion": 30,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "liber (motorola one fusion+)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 420,
+                "glEsVersion": 196610,
+                "ramMb": 3650
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Vă mulțumim pentru feedback! Apreciem utilizarea aplicației noastre și suntem încântați că vă bucurați de simplitatea și utilitatea acesteia. Dacă aveți probleme de utilizare, vă rugăm să ne contactați prin canalul din aplicație sau prin email (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 58000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "83d9a3d7-109a-4380-956b-b840ba98359c",
+        "authorName": "Андрей Кочедыков",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tОбновлённые функции впечатляют. Только какой в них смысл, если вы до сих пор не можете найти альтернативую оплату обновления для России? И уже 4-год как. Что вы ерундой занимаетесь?",
+              "lastModified": {
+                "seconds": "1767612586",
+                "nanos": 502000000
+              },
+              "starRating": 3,
+              "reviewerLanguage": "ru",
+              "device": "HWJSN-H",
+              "androidOsVersion": 29,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "HWJSN-H (Honor 8X)",
+                "manufacturer": "Huawei",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 3680
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Спасибо за ваш отзыв! Мы рады, что вам нравятся новые функции. Пожалуйста, используйте опцию \"Связаться с нами\" в приложении, чтобы предоставить детали. Если вам нужна помощь, пожалуйста, свяжитесь с нами через \"Связаться с нами\" в приложении или напишите на support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 772000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "6be0bcbd-1dfc-4ea8-8850-5d5d5959f735",
+        "authorName": "Abdullah Cvc c",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tجيد",
+              "lastModified": {
+                "seconds": "1767612487",
+                "nanos": 230000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "ar",
+              "device": "lancelot",
+              "androidOsVersion": 31,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "lancelot (Redmi 9)",
+                "manufacturer": "Redmi",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 440,
+                "glEsVersion": 196610,
+                "ramMb": 3701
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "شكراً لتغذيتك الراجعة! نحن متحمسون لأنك تستمتع بسهولة استخدام التطبيق. إذا واجهت أي مشاكل تتعلق بالاستخدام، فلا تتردد في الاتصال بنا من خلال القناة داخل التطبيق أو عبر البريد الإلكتروني (support@alfred.camera).",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 53000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "efe5e122-8795-41d5-ba31-d6ec91fa66ac",
+        "authorName": "Darren Oliver",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tnice",
+              "lastModified": {
+                "seconds": "1767612023",
+                "nanos": 996000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "aito",
+              "androidOsVersion": 35,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "aito (motorola razr 60)",
+                "manufacturer": "Motorola",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2640,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 420,
+                "glEsVersion": 196610,
+                "ramMb": 7418
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're thrilled you're enjoying our app's simplicity and ease of use. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 229000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "c3f9a362-bb25-48bc-af73-01e69f10178a",
+        "authorName": "ba ker",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\twerkt niet",
+              "lastModified": {
+                "seconds": "1767610532",
+                "nanos": 187000000
+              },
+              "starRating": 1,
+              "reviewerLanguage": "nl",
+              "device": "r8q",
+              "androidOsVersion": 33,
+              "deviceMetadata": {
+                "productName": "r8q (Galaxy S20 FE 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2400,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 5628
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Het spijt ons te horen dat het niet werkt. Probeer alsjeblieft de stappen in deze link: https://url.alfredcamera.app/page/8EA8. Als het probleem aanhoudt, neem dan via de app 'Contact Us' contact met ons op. Screenshots zouden ook helpen!",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 77000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "a91dbf0d-3342-487d-89ca-edf5b6b808fa",
+        "authorName": "Nora Dakotas",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tads scam and suspicious log debug",
+              "lastModified": {
+                "seconds": "1767607914",
+                "nanos": 149000000
+              },
+              "starRating": 1,
+              "reviewerLanguage": "en",
+              "device": "itel-A6610L",
+              "androidOsVersion": 34,
+              "deviceMetadata": {
+                "productName": "itel-A6610L (itel A90)",
+                "manufacturer": "Itel",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1612,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 320,
+                "glEsVersion": 196610,
+                "ramMb": 2813
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback. Ads support keeping AlfredCamera free while maintaining quality. We understand they can be disruptive. If you have questions or thoughts, please reach out via the in-app 'Contact Us' channel.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 175000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "e6fab52b-e604-47d5-a587-e1f033911e17",
+        "authorName": "r. sarwate",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tsupe4 app",
+              "lastModified": {
+                "seconds": "1767602817",
+                "nanos": 558000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "r9s",
+              "androidOsVersion": 36,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "deviceMetadata": {
+                "productName": "r9s (Galaxy S21 FE 5G)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2340,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 7299
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We appreciate your use of our app and are thrilled that you're enjoying our services. Don't forget to share your experience with others! If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 196000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "a4abbf0a-1cd9-4b10-9289-a67cdb85b183",
+        "authorName": "Александр Катушин",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tдо недавнего времени все более-менее работало, но последнее время перестало. При попытке подключиться сообщает об ошибки.это Бесплатная версия платной ни когда не пользовался не нужен такой арсенал.",
+              "lastModified": {
+                "seconds": "1767602072",
+                "nanos": 967000000
+              },
+              "starRating": 2,
+              "reviewerLanguage": "ru",
+              "device": "TECNO-CI8n",
+              "androidOsVersion": 33,
+              "appVersionCode": 5844300,
+              "appVersionName": "2025.26.0",
+              "thumbsUpCount": 1,
+              "deviceMetadata": {
+                "productName": "TECNO-CI8n (CAMON 19 Pro)",
+                "manufacturer": "Tecno",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1080,
+                "screenHeightPx": 2460,
+                "nativePlatform": "ABI_ARM64_V8,ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 480,
+                "glEsVersion": 196610,
+                "ramMb": 7746
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Сожалею, что у вас проблемы с подключением. Попробуйте предложения по устранению неполадок по следующей ссылке: https://url.alfredcamera.app/page/8EA8. Если это не поможет, свяжитесь с нами через 'Связаться с нами' в приложении для предоставления дополнительных деталей.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 670000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "63cddac1-e13c-478e-9f8b-d7d67b03c8c6",
+        "authorName": "Laura Mcnulty",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\tlove it",
+              "lastModified": {
+                "seconds": "1767597827",
+                "nanos": 600000000
+              },
+              "starRating": 5,
+              "reviewerLanguage": "en",
+              "device": "U319AA",
+              "androidOsVersion": 30,
+              "appVersionCode": 5722300,
+              "appVersionName": "2025.18.1",
+              "deviceMetadata": {
+                "productName": "U319AA (U319AA)",
+                "manufacturer": "AT&T",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 720,
+                "screenHeightPx": 1440,
+                "nativePlatform": "ABI_ARM_V7,ABI_ARM",
+                "screenDensityDpi": 300,
+                "glEsVersion": 196610,
+                "ramMb": 1856
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thank you for your feedback! We're thrilled you're enjoying the app's simplicity. If you need help, please contact us via in-app 'Contact Us' or email support@alfred.camera.",
+              "lastModified": {
+                "seconds": "1767942694",
+                "nanos": 95000000
+              }
+            }
+          }
+        ]
+      },
+      {
+        "reviewId": "15a7a250-9997-4537-b70c-7393dfedf3b2",
+        "authorName": "Angel Hibbs",
+        "comments": [
+          {
+            "userComment": {
+              "text": "\ttrash app. can't stay connected to the internet for nothing.",
+              "lastModified": {
+                "seconds": "1767597377",
+                "nanos": 671000000
+              },
+              "starRating": 1,
+              "reviewerLanguage": "en",
+              "device": "pa3q",
+              "androidOsVersion": 36,
+              "appVersionCode": 3608300,
+              "appVersionName": "2022.9.1",
+              "deviceMetadata": {
+                "productName": "pa3q (Galaxy S25 Ultra)",
+                "manufacturer": "Samsung",
+                "deviceClass": "FORM_FACTOR_PHONE",
+                "screenWidthPx": 1440,
+                "screenHeightPx": 3120,
+                "nativePlatform": "ABI_ARM64_V8",
+                "screenDensityDpi": 450,
+                "glEsVersion": 196610,
+                "ramMb": 11114
+              }
+            }
+          },
+          {
+            "developerComment": {
+              "text": "Thanks for reaching out. We’re sorry to hear you're experiencing connection issues. Could you kindly try the troubleshooting suggestions in the following link to see if that helps: https://url.alfredcamera.app/page/8EA8? Otherwise, please contact us via the in-app 'Contact Us' channel. Screenshots would help too!",
+              "lastModified": {
+                "seconds": "1767683561",
+                "nanos": 827000000
+              }
+            }
+          }
+        ]
+      }
+    ]
+  }
+]
