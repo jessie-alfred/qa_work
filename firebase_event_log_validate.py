@@ -8,9 +8,9 @@ Android / iOS Firebase 事件 log 擷取與驗證工具。
 
 使用方式：
   Android（預設）：
-    python android_firebase_logcat.py verify-specs --timeout 30 --output verify_result.txt
+    python firebase_event_log_validate.py verify-specs --timeout 30 --output verify_result.txt
   iOS（需先安裝 libimobiledevice，裝置接 USB）：
-    python android_firebase_logcat.py verify-specs --platform ios --timeout 30 --output verify_result.txt
+    python firebase_event_log_validate.py verify-specs --platform ios --timeout 30 --output verify_result.txt
   擷取到檔案：capture --output events.jsonl [--platform android|ios]
   即時顯示：stream [--platform android|ios]
   依 firebase_event_specs 驗證：verify-specs [--platform android|ios] [--timeout 0]
@@ -249,7 +249,7 @@ def validate_event_against_spec(
     """
     檢查單一事件是否符合 spec（Mandatory 屬性必須存在且非空）。
     spec 可為 list[(prop, requirement, data_type)] 或 function_behavior 的 dict；依 event 的 function 只驗證該 function 的必填。
-    回傳 (errors, warnings)。errors 為 FAIL；warnings 為 [WARNING]（屬性值 "none" 或 Number 型且值為 0）。
+    回傳 (errors, warnings)。errors 為 FAIL；warnings 為 [WARNING]（Optional 屬性為空字串、屬性值 "none" 或 Number 型且值為 0）。
     """
     errors: list[str] = []
     warnings: list[str] = []
@@ -272,6 +272,7 @@ def validate_event_against_spec(
             return (t[0], t[1], t[2])
         return (t[0], t[1], "")
 
+    optional_props: set[str] = {_ensure_3tuple(t)[0] for t in prop_list if _ensure_3tuple(t)[1] == "Optional"}
     for item in prop_list:
         prop_name, requirement, data_type = _ensure_3tuple(item)
         if requirement != "Mandatory":
@@ -281,7 +282,10 @@ def validate_event_against_spec(
             errors.append(f"事件 {event_name} 缺少必填屬性: {prop_name}")
     for key, val in attrs.items():
         if val is not None and isinstance(val, str) and val.strip() == "":
-            errors.append(f"事件 {event_name} 屬性 {key} 為空字串")
+            if key in optional_props:
+                warnings.append(f"事件 {event_name} 屬性 {key} 為空字串 (Optional)")
+            else:
+                errors.append(f"事件 {event_name} 屬性 {key} 為空字串")
     # WARNING: 屬性值為 "none" 或 (spec 為 Number 型且值為 0)
     prop_data_types: dict[str, str] = {_ensure_3tuple(t)[0]: _ensure_3tuple(t)[2] for t in prop_list}
     for key, val in attrs.items():
