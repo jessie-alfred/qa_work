@@ -28,7 +28,10 @@ from typing import Any, Iterator
 EVENT_PREFIX = "[Alfred][Event] "
 EVENT_PREFIX_PATTERN = re.compile(re.escape(EVENT_PREFIX))
 
-# verify-specs 時不檢查、直接視為略過驗證的事件名稱
+# verify-specs 時不檢查、直接視為略過驗證的事件名稱. 保留舊的事件
+# from Server convert: click subscription plan
+# Android only permission_status
+# error_log: 錯誤日誌 Debug 用途
 IGNORED_EVENT_NAMES = frozenset({
     "screen_view", "error_log", "permission_status", "convert: click subscription plan","initial_login_succeeded","continuous_recording_playback_memo_1"
 })
