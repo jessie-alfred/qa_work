@@ -587,11 +587,17 @@ def main() -> None:
             if name in IGNORED_EVENT_NAMES:
                 ignored_list.append(ev)
                 continue
+            # function_behavior 規範：event_name 必須為實際行為名稱（如 click_tab_navigation），不可為 "function_behavior"
+            attrs = ev.get("attributes") or {}
+            if name == "function_behavior" and attrs.get("function"):
+                func = attrs.get("function")
+                failed_list.append((ev, [f"event_name 應為 {func!r}，不可為 function_behavior（規範見 function_behavior_event_spec.md）"]))
+                continue
             spec = all_specs.get(name)
             ev_for_validate = ev
             if spec is None and isinstance(fb_spec, dict) and name in fb_spec:
                 spec = fb_spec
-                ev_for_validate = {**ev, "attributes": {**ev.get("attributes", {}), "function": name}}
+                ev_for_validate = {**ev, "attributes": {**attrs, "function": name}}
             if spec is None:
                 failed_list.append((ev, [f"事件 {name} 未在 firebase_event_specs 中定義"]))
                 continue
@@ -615,35 +621,51 @@ def main() -> None:
         def _ts(ev: dict) -> str:
             return ev.get("_log_timestamp", "")
 
+        def _report_display_name(ev: dict) -> str:
+            """報告中顯示的名稱：function_behavior 用 attributes.function（如 click_tab_navigation），其餘用 event_name。"""
+            name = ev.get("event_name", "?")
+            if name == "function_behavior":
+                func = (ev.get("attributes") or {}).get("function")
+                if func:
+                    return func
+            return name
+
+        def _report_attributes(ev: dict) -> dict:
+            """報告中顯示的 attributes：function_behavior 時省略已顯示在標題的 function，避免重複。"""
+            attrs = dict(ev.get("attributes") or {})
+            if ev.get("event_name") == "function_behavior" and "function" in attrs:
+                attrs = {k: v for k, v in attrs.items() if k != "function"}
+            return attrs
+
         report_lines.append("")
         report_lines.append("--- 符合規範 [PASS] ---")
         for ev in sorted(passed_list, key=_ts):
             ts = _ts(ev)
-            report_lines.append(f"  [PASS] {ev.get('event_name', '?')}" + (f" | {ts}" if ts else ""))
-            report_lines.append(f"    {json.dumps(ev.get('attributes', {}), ensure_ascii=False)}")
+            report_lines.append(f"  [PASS] {_report_display_name(ev)}" + (f" | {ts}" if ts else ""))
+            report_lines.append(f"    {json.dumps(_report_attributes(ev), ensure_ascii=False)}")
         report_lines.append("")
         report_lines.append("--- 注意 [WARNING] ---")
         report_lines.append("  （屬性值為 \"none\" 或 Number 型且值為 0）")
         for ev, warns in sorted(warning_list, key=lambda x: _ts(x[0])):
             ts = _ts(ev)
-            report_lines.append(f"  [WARNING] {ev.get('event_name', '?')}: {'; '.join(warns)}" + (f" | {ts}" if ts else ""))
-            report_lines.append(f"    {json.dumps(ev.get('attributes', {}), ensure_ascii=False)}")
+            report_lines.append(f"  [WARNING] {_report_display_name(ev)}: {'; '.join(warns)}" + (f" | {ts}" if ts else ""))
+            report_lines.append(f"    {json.dumps(_report_attributes(ev), ensure_ascii=False)}")
         if not warning_list:
             report_lines.append("  (無)")
         report_lines.append("")
         report_lines.append("--- 不符合 [FAIL] ---")
         for ev, errs in sorted(failed_list, key=lambda x: _ts(x[0])):
             ts = _ts(ev)
-            report_lines.append(f"  [FAIL] {ev.get('event_name', '?')}: {'; '.join(errs)}" + (f" | {ts}" if ts else ""))
-            report_lines.append(f"    {json.dumps(ev.get('attributes', {}), ensure_ascii=False)}")
+            report_lines.append(f"  [FAIL] {_report_display_name(ev)}: {'; '.join(errs)}" + (f" | {ts}" if ts else ""))
+            report_lines.append(f"    {json.dumps(_report_attributes(ev), ensure_ascii=False)}")
         if not failed_list:
             report_lines.append("  (無)")
         report_lines.append("")
         report_lines.append("--- 忽略不檢查 [IGNORE] ---")
         for ev in sorted(ignored_list, key=_ts):
             ts = _ts(ev)
-            report_lines.append(f"  [IGNORE] {ev.get('event_name', '?')}" + (f" | {ts}" if ts else ""))
-            report_lines.append(f"    {json.dumps(ev.get('attributes', {}), ensure_ascii=False)}")
+            report_lines.append(f"  [IGNORE] {_report_display_name(ev)}" + (f" | {ts}" if ts else ""))
+            report_lines.append(f"    {json.dumps(_report_attributes(ev), ensure_ascii=False)}")
         if not ignored_list:
             report_lines.append("  (無)")
         if not failed_list:
