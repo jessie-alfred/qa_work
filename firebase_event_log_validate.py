@@ -289,11 +289,14 @@ def validate_event_against_spec(
                 warnings.append(f"事件 {event_name} 屬性 {key} 為空字串 (Optional)")
             else:
                 errors.append(f"事件 {event_name} 屬性 {key} 為空字串")
-    # message_id 內容不允許 "/"
+    # message_id 僅能為英文字母（a-z, A-Z）
     if "message_id" in attrs:
         mid = attrs.get("message_id")
-        if isinstance(mid, str) and "/" in mid:
-            errors.append(f"事件 {event_name} 屬性 message_id 內容不允許包含 '/'")
+        if isinstance(mid, str):
+            if "/" in mid:
+                errors.append(f"事件 {event_name} 屬性 message_id 內容不允許包含 '/'")
+            if mid and not re.fullmatch(r"[a-zA-Z]+", mid):
+                errors.append(f"事件 {event_name} 屬性 message_id 僅能為英文字母，目前為: {mid!r}")
     # WARNING: 屬性值為 "none" 或 (spec 為 Number 型且值為 0)
     prop_data_types: dict[str, str] = {_ensure_3tuple(t)[0]: _ensure_3tuple(t)[2] for t in prop_list}
     for key, val in attrs.items():
