@@ -36,6 +36,9 @@ IGNORED_EVENT_NAMES = frozenset({
     "screen_view", "error_log", "permission_status", "convert: click subscription plan","initial_login_succeeded","continuous_recording_playback_memo_1","pageview: product value"
 })
 
+# ac_message_id、action：含中文（CJK 漢字）即判定 FAIL
+RE_CONTAINS_CJK = re.compile(r"[\u3400-\u4dbf\u4e00-\u9fff]")
+
 
 def run_logcat(filter_tag: str | None = None) -> Iterator[str]:
     """執行 adb logcat 並 yield 每一行。可選 filter_tag 只抓特定 tag。"""
@@ -289,14 +292,21 @@ def validate_event_against_spec(
                 warnings.append(f"事件 {event_name} 屬性 {key} 為空字串 (Optional)")
             else:
                 errors.append(f"事件 {event_name} 屬性 {key} 為空字串")
-    # message_id 僅能為英文字母、數字或底線/連字號（a-z, A-Z, 0-9, _, -），不允許 "/"
-    if "message_id" in attrs:
-        mid = attrs.get("message_id")
-        if isinstance(mid, str):
-            if "/" in mid:
-                errors.append(f"事件 {event_name} 屬性 message_id 內容不允許包含 '/'")
-            if mid and not re.fullmatch(r"[a-zA-Z0-9_-]+", mid):
-                errors.append(f"事件 {event_name} 屬性 message_id 僅能為英文字母、數字或底線/連字號，目前為: {mid!r}")
+    # ac_message_id、action：不得含中文、大寫；僅小寫 a-z、數字、_、-；不允許 "/"
+    _id_like_keys = ("ac_message_id", "action")
+    for _key in _id_like_keys:
+        if _key not in attrs:
+            continue
+        _val = attrs.get(_key)
+        if isinstance(_val, str) and _val:
+            if RE_CONTAINS_CJK.search(_val):
+                errors.append(f"事件 {event_name} 屬性 {_key} 含中文，判定 FAIL，目前為: {_val!r}")
+            elif "/" in _val:
+                errors.append(f"事件 {event_name} 屬性 {_key} 內容不允許包含 '/'")
+            elif re.search(r"[A-Z]", _val):
+                errors.append(f"事件 {event_name} 屬性 {_key} 不得含大寫英文字母（FAIL），目前為: {_val!r}")
+            elif not re.fullmatch(r"[a-z0-9_-]+", _val):
+                errors.append(f"事件 {event_name} 屬性 {_key} 僅能為小寫英文字母、數字或底線/連字號，目前為: {_val!r}")
     # WARNING: 屬性值為 "none" 或 (spec 為 Number 型且值為 0)
     prop_data_types: dict[str, str] = {_ensure_3tuple(t)[0]: _ensure_3tuple(t)[2] for t in prop_list}
     for key, val in attrs.items():
