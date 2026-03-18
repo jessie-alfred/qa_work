@@ -33,7 +33,7 @@ EVENT_PREFIX_PATTERN = re.compile(re.escape(EVENT_PREFIX))
 # Android only permission_status
 # error_log: 錯誤日誌 Debug 用途
 IGNORED_EVENT_NAMES = frozenset({
-    "screen_view", "error_log", "permission_status", "convert: click subscription plan","initial_login_succeeded","continuous_recording_playback_memo_1"
+    "screen_view", "error_log", "permission_status", "convert: click subscription plan","initial_login_succeeded","continuous_recording_playback_memo_1","pageview: product value"
 })
 
 
