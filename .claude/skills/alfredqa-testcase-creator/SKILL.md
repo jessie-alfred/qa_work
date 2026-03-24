@@ -34,7 +34,7 @@ https://alfredlabs.atlassian.net/wiki/spaces/~590960658/pages/3834085744/Termino
    - **第 2 節**：Entitlement / 訂閱控制邏輯（依需求調整節名）
    - **第 3 節**：使用者情境測試（User Scenarios / Paywall）
    - **第 4 節**：穩定性與邊緣案例測試（Stability & Edge Cases）
-   - **第 5 節**：異常情境測試（Abnormal Scenarios）— **必須產出**，參考 `references/Test_Scenario.md` 的異常情境分類（A 網路異常、B 螢幕方向、C App 生命週期、D 帳號同步、E 儲存邊界、F 偵測異常），從中挑選與本次變更相關的項目展開成具體測試案例，編號格式為 `A-1`、`B-2` 等字母前綴。
+   - **第 5 節**：異常情境測試（Abnormal Scenarios）— 參考 `references/Test_Scenario.md`，**只將 `[x]` 勾選的項目**展開成具體測試案例，編號格式為 `A-1`、`B-2` 等字母前綴。未勾選（`[ ]`）的項目略過，不納入測項。若全部未勾選，可省略第 5 節。
 
 
 ## 測試案例 .md 轉換成 csv 格式
