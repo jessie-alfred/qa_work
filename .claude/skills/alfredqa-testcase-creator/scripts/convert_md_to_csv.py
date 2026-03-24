@@ -32,8 +32,8 @@ def parse_markdown_test_cases(md_file_path: str) -> List[Dict[str, str]]:
     current_section = ""
 
     # 使用正則表達式匹配測試案例
-    # 匹配格式：### 1.1 測試標題 或 #### 1.15.1 測試標題
-    test_case_pattern = r'^#{3,4}\s+(\d+\.\d+(?:\.\d+)?)\s+(.+?)$'
+    # 匹配格式：### 1.1 測試標題、### 1.15.1 測試標題 或 ### A-1 測試標題
+    test_case_pattern = r'^#{3,4}\s+((?:\d+\.\d+(?:\.\d+)?)|(?:[A-Z]-\d+))\s+(.+?)$'
     # 匹配測試目標
     test_objective_pattern = r'\*\*測試目標\*\*[：:]\s*(.+?)(?=\n\n|\*\*|$)'
     # 匹配前置條件
@@ -181,6 +181,8 @@ def determine_category(test_id: str, test_title: str, current_section: str) -> s
         return '裝置相容性測試'
     elif test_id.startswith('9.'):
         return '整合測試'
+    elif re.match(r'^[A-Z]-\d+$', test_id):
+        return '異常情境測試'
     else:
         return current_section or '其他'
 
