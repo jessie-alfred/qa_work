@@ -48,6 +48,7 @@ verify_result*.txt
 # Other
 .localized
 .secrets/
+jwt_decode.py
 
 # Test result
 verify_result*.txt

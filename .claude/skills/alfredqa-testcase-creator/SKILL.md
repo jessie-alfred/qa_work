@@ -29,12 +29,13 @@ https://alfredlabs.atlassian.net/wiki/spaces/~590960658/pages/3834085744/Termino
 2. **測試案例**
 格式及規範參考 `.claude/skills/alfredqa-testcase-creator/references/output-patterns.md`
 
-   測試案例須涵蓋以下五個面向（每次產出均需包含）：
+   測試案例須涵蓋以下六個面向（每次產出均需包含）：
    - **第 1 節**：功能與業務邏輯測試（Functional & Business Logic）
    - **第 2 節**：Entitlement / 訂閱控制邏輯（依需求調整節名）
    - **第 3 節**：使用者情境測試（User Scenarios / Paywall）
-   - **第 4 節**：穩定性與邊緣案例測試（Stability & Edge Cases）
-   - **第 5 節**：異常情境測試（Abnormal Scenarios）— 參考 `references/Test_Scenario.md`，**只將 `[x]` 勾選的項目**展開成具體測試案例，編號格式為 `A-1`、`B-2` 等字母前綴。未勾選（`[ ]`）的項目略過，不納入測項。若全部未勾選，可省略第 5 節。
+   - **第 4 節**：Membership 轉換測試（Membership Conversion）— 涵蓋各 tier 升降級路徑的功能邊界驗證
+   - **第 5 節**：穩定性與邊緣案例測試（Stability & Edge Cases）
+   - **第 6 節**：異常情境測試（Abnormal Scenarios）— 參考 `references/Test_Scenario.md`，**只將 `[x]` 勾選的項目**展開成具體測試案例，編號格式為 `A-1`、`B-2` 等字母前綴。未勾選（`[ ]`）的項目略過，不納入測項。若全部未勾選，可省略第 6 節。
 
 
 ## 測試案例 .md 轉換成 csv 格式

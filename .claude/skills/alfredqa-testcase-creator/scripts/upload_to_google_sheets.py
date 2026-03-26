@@ -18,6 +18,7 @@ import json
 import os
 import re
 import sys
+from datetime import datetime
 from typing import Optional
 
 from google.oauth2 import service_account
@@ -211,18 +212,19 @@ def main():
     print(f"✅ 讀取完成，共 {len(values)} 行資料")
 
     # 決定標題
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M")
     if args.title:
-        title = args.title
+        title = f"{args.title}_{timestamp}"
     else:
         # 從檔名取得標題
         base_name = os.path.splitext(os.path.basename(args.csv_file))[0]
         # 提取 CAMERA-xxxx 部分（假設檔名格式為 CAMERA-xxxx_...）
         match = re.match(r'^(CAMERA-\d+)', base_name)
         if match:
-            title = f"{match.group(1)}_test_case"
+            title = f"{match.group(1)}_test_case_{timestamp}"
         else:
-            # 如果無法匹配，使用原檔名加上 _test_case
-            title = f"{base_name}_test_case"
+            # 如果無法匹配，使用原檔名加上 _test_case 與 timestamp
+            title = f"{base_name}_test_case_{timestamp}"
 
     # 讀取憑證並建立 Google 服務
     credentials_json = None
