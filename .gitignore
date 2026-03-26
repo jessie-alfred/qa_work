@@ -53,4 +53,4 @@ jwt_decode.py
 # Test result
 verify_result*.txt
 firebase_event_verify_result/
-test_cases/
+test_case/
